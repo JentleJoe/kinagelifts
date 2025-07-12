@@ -1,11 +1,10 @@
 import Hero from './components/Hero';
 import ProductServiceSection from './components/ProductsServiceSection';
-import Services from './components/Services';
-import Testimonials from './components/Testimonials';
 import Achievements from './components/Achievements';
 import CustomerReviews from './components/CustomerReviews';
 import FAQSection from './components/FAQSection';
 import WhyChooseUs from './components/WhyChooseUs';
+import ContactFormSection from '../../components/ContactFormSection';
 
 const Home = () => {
   // Sample data for elevators/lifts
@@ -74,8 +73,7 @@ const Home = () => {
       <CustomerReviews />
       <FAQSection />
       <WhyChooseUs />
-      <Services />
-      <Testimonials />
+      <ContactFormSection />
     </>
   );
 };
