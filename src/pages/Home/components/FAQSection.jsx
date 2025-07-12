@@ -18,15 +18,16 @@ const FAQSection = () => {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-[#1B1B1B] leading-tight mb-8 uppercase">
             YOUR QUESTIONS ANSWERED: FAQS ABOUT STEEL PRODUCTS AND SERVICES
           </h2>
-          <div className="border border-gray-300 rounded-sm overflow-hidden">
+          <div className="space-y-4">
             {faqData.map((faq, index) => (
-              <FAQItem
-                key={faq.id}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={openIndex === index}
-                onClick={() => handleItemClick(index)}
-              />
+              <div key={faq.id} className="border border-gray-300 rounded-sm overflow-hidden">
+                <FAQItem
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openIndex === index}
+                  onClick={() => handleItemClick(index)}
+                />
+              </div>
             ))}
           </div>
         </div>
