@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import NavTooltip from "./NavTooltip"
 import { navigationData } from "../data/navigationData"
 
@@ -36,23 +37,26 @@ const Navbar = () => {
               description={item.description}
               isVisible={hoveredItem === index}
             >
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className="text-white hover:text-gray-300 transition-colors font-medium relative py-2"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
                 {item.label}
-              </a>
+              </Link>
             </NavTooltip>
           ))}
         </div>
 
         {/* Contact Button */}
         <div className="hidden md:block">
-          <button className="border border-white text-white px-6 py-2 hover:bg-white hover:text-black transition-colors font-medium">
+          <Link 
+            to="/contact" 
+            className="border border-white text-white px-6 py-2 hover:bg-white hover:text-black transition-colors font-medium inline-block"
+          >
             CONTACT US
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
