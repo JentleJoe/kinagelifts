@@ -7,7 +7,7 @@ const NavTooltip = ({ children, title, description, isVisible }) => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-end">
             {/* Left Column: Title */}
             <div className="w-[45%] pr-8">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-[#1B1B1B] leading-tight uppercase">{title}</h2>
+              <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-[#1B1B1B] leading-tight uppercase">{title}</h2>
             </div>
 
             {/* Right Column: Description */}
