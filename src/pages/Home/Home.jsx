@@ -4,6 +4,8 @@ import Services from './components/Services';
 import Testimonials from './components/Testimonials';
 import Achievements from './components/Achievements';
 import CustomerReviews from './components/CustomerReviews';
+import FAQSection from './components/FAQSection';
+import WhyChooseUs from './components/WhyChooseUs';
 
 const Home = () => {
   // Sample data for elevators/lifts
@@ -70,6 +72,8 @@ const Home = () => {
       />
       <Achievements />
       <CustomerReviews />
+      <FAQSection />
+      <WhyChooseUs />
       <Services />
       <Testimonials />
     </>
