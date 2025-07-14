@@ -4,7 +4,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }) => {
   return (
     <div className="border-b border-gray-300 last:border-b-0">
       <button
-        className={`flex justify-between items-center w-full py-4 px-6 text-[#1B1B1B] text-lg font-medium hover:bg-gray-50 transition-colors focus:outline-none ${
+        className={`flex justify-between items-center w-full py-4 px-6 text-[#1B1B1B] text-lg font-medium hover:bg-white transition-colors focus:outline-none ${
           isOpen ? "bg-white" : "bg-transparent"
         }`}
         onClick={onClick}

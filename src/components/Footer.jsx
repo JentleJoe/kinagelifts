@@ -1,4 +1,4 @@
-import { MessageCircle, Phone, Mail, ArrowRight } from "lucide-react"
+import { MessageCircle, Phone, Mail } from "lucide-react"
 import { footerProducts, footerMenu } from "../data/footerLinks"
 
 const Footer = () => {
@@ -64,8 +64,15 @@ const Footer = () => {
                 placeholder="Enter Your Email"
                 className="flex-grow bg-[#2A2A2A] text-white py-3 px-4 focus:outline-none border border-gray-700 focus:border-white transition-colors placeholder-gray-500"
               />
-              <button className="bg-white text-[#1B1B1B] w-12 h-auto flex items-center justify-center hover:bg-gray-200 transition-colors">
-                <ArrowRight className="w-5 h-5" />
+              <button className="bg-white text-[#1B1B1B] w-12 h-auto flex items-center justify-center hover:bg-gray-200 transition-colors group">
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m4 20 16-16m-9 0h9m0 0v9"></path>
+                </svg>
               </button>
             </form>
           </div>

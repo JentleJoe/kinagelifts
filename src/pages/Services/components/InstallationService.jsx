@@ -13,18 +13,18 @@ const InstallationService = () => {
           {/* Left Column: Service Details (Single White Block) */}
           <div className="bg-white shadow-sm border border-gray-200">
             {/* Header */}
-            <div className="bg-[#1B1B1B] text-white py-9 px-6 flex items-center space-x-2 shadow-md">
+            <div className="bg-[#1B1B1B] text-white py-9 px-7 flex items-center space-x-2 shadow-md">
               {" "}
               {/* Changed justify-between to items-center space-x-2 */}
-              <h2 className="text-2xl font-bold uppercase">INSTALLATION</h2>
+              <h2 className="text-5xl font-heading font-bold uppercase">INSTALLATION</h2>
               <svg
-                className="w-6 h-6 -mt-1 -mr-1"
+                className="w-14 h-16 -mt-1 -mr-1"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m4 20 16-16m-9 0h9m0 0v9"></path>
               </svg>
             </div>
             {/* Service Items */}

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import FAQItem from "./FAQItem"
-import { faqData } from "./data/faqData"
+import { faqData } from "../../../data/faqData"
 import { Grid3x3, LayoutGrid } from "lucide-react" // Reusing icons from achievements
 
 const FAQSection = () => {

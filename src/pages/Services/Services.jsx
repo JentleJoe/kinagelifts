@@ -1,6 +1,8 @@
 import InstallationService from "./components/InstallationService";
 import MaintenanceService from "./components/MaintenanceService";
 import AllServicesSection from "./components/AllServicesSection";
+import AccordionSection from "./components/AccordionSection";
+import ContactFormSection from "../../components/ContactFormSection";
 
 const Services = () => {
   return (
@@ -22,6 +24,8 @@ const Services = () => {
       <InstallationService />
       <MaintenanceService />
       <AllServicesSection />
+      <AccordionSection />
+      <ContactFormSection />
       </div>
     </>
   );
