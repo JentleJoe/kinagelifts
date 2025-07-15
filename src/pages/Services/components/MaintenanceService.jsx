@@ -6,18 +6,8 @@ const MaintenanceService = () => {
     <section className="py-16 bg-[#F9F9F9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] items-end">
-          {" "}
-          {/* Reversed grid order and column ratio */}
-          {/* Left Column: Image */}
-          <div className="flex justify-center lg:justify-start">
-            <img
-              src="/placeholder.svg?height=600&width=800&text=Industrial+Forging&bg=333333&color=ffffff"
-              alt="Industrial Forging Process"
-              className="w-full object-cover lg:h-[500px]" // Fixed height for desktop, bottom aligned
-            />
-          </div>
-          {/* Right Column: Service Details (Single White Block) */}
-          <div className="bg-white shadow-sm border border-gray-200">
+          {/* Service Details (Single White Block) - Always first on mobile */}
+          <div className="bg-white shadow-sm border border-gray-200 lg:order-2">
             {/* Header */}
             <div className="bg-[#1B1B1B] text-white py-9 px-7 flex items-center space-x-2 shadow-md">
               <h2 className="text-5xl font-heading font-bold uppercase">MAINTENANCE</h2>
@@ -42,6 +32,14 @@ const MaintenanceService = () => {
                 />
               ))}
             </div>
+          </div>
+          {/* Image - Always second on mobile */}
+          <div className="flex justify-center lg:justify-start lg:order-1">
+            <img
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+              alt="Elevator Maintenance and Repair"
+              className="w-full object-cover lg:h-[880px]"
+            />
           </div>
         </div>
       </div>

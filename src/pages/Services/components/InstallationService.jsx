@@ -8,14 +8,10 @@ const InstallationService = () => {
         {" "}
         {/* Outer container for padding */}
         <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] items-end">
-          {" "}
-          {/* Removed gap-8, changed items-start to items-stretch */}
-          {/* Left Column: Service Details (Single White Block) */}
-          <div className="bg-white shadow-sm border border-gray-200">
+          {/* Left Column: Service Details (Single White Block) - Always first on mobile */}
+          <div className="bg-white shadow-sm border border-gray-200 lg:order-1">
             {/* Header */}
             <div className="bg-[#1B1B1B] text-white py-9 px-7 flex items-center space-x-2 shadow-md">
-              {" "}
-              {/* Changed justify-between to items-center space-x-2 */}
               <h2 className="text-5xl font-heading font-bold uppercase">INSTALLATION</h2>
               <svg
                 className="w-14 h-16 -mt-1 -mr-1"
@@ -39,14 +35,12 @@ const InstallationService = () => {
               ))}
             </div>
           </div>
-          {/* Right Column: Image (No extra container, full height) */}
-          <div className="flex justify-center lg:justify-end">
-            {" "}
-            {/* Added h-full */}
+          {/* Right Column: Image (No extra container, full height) - Always second on mobile */}
+          <div className="flex justify-center lg:justify-end lg:order-2">
             <img
-              src="/placeholder.svg?height=600&width=800&text=Steel+Products&bg=cccccc&color=333333"
-              alt="Various Steel Products"
-              className="w-full object-cover lg:h-[600px]"
+              src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+              alt="Modern Glass Elevator Installation"
+              className="w-full object-cover lg:h-[872px]"
             />
           </div>
         </div>
