@@ -3,11 +3,13 @@ import MaintenanceService from "./components/MaintenanceService";
 import AllServicesSection from "./components/AllServicesSection";
 import AccordionSection from "./components/AccordionSection";
 import ContactFormSection from "../../components/ContactFormSection";
+import ServiceProcedureSection from "./components/ServiceProcedureSection";
+import ServicesOverview from "./components/ServicesOverview";
 
 const Services = () => {
   return (
     <>
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen">
         {/* Hero Section */}
         <section className="pt-32 pb-16 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,9 +23,11 @@ const Services = () => {
             </div>
           </div>
         </section>
+      <ServicesOverview />
       <InstallationService />
       <MaintenanceService />
       <AllServicesSection />
+      <ServiceProcedureSection />
       <AccordionSection />
       <ContactFormSection />
       </div>
