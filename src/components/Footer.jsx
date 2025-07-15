@@ -26,8 +26,9 @@ const Footer = () => {
             <h3 className="text-2xl font-bold">KinageLifts</h3>
             </div>
             <p className="text-gray-300 leading-relaxed mb-8">
-              Experience industrial excellence with IAL. Our precision-engineered tapes elevate performance across diverse
-              sectors. Contact us for customized solutions and join the journey of sealing success with IAL.
+              Experience vertical mobility excellence with KinageLifts. We specialize in elevator and escalator solutions, 
+              from importation and installation to maintenance and modernization. Contact us for customized mobility systems 
+              that enhance accessibility and convenience in modern infrastructures.
             </p>
           </div>
           <div className="flex flex-wrap gap-6 text-gray-300">
@@ -40,11 +41,11 @@ const Footer = () => {
               <span>4812 263 8745</span>
             </a>
             <a
-              href="mailto:apexsteel@gmail.com"
+              href="mailto:info@kinagelifts.com"
               className="flex items-center space-x-2 hover:text-white transition-colors"
             >
               <Mail className="w-5 h-5" />
-              <span>apexsteel@gmail.com</span>
+              <span>info@kinagelifts.com</span>
             </a>
           </div>
         </div>

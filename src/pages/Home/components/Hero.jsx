@@ -28,7 +28,7 @@ const Hero = () => {
 
             {/* Subtext */}
             <p className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-12 max-w-2xl">
-              At ApexSteel Inc., we are dedicated to delivering high-quality steel products and services to meet the
+              At KinageLifts, we are dedicated to delivering high-quality elevator and escalator solutions to meet the
               diverse needs of businesses across industries.
             </p>
 

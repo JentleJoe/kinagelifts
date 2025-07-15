@@ -10,7 +10,7 @@ const Achievements = () => {
             FOR THE LAST 10 YEARS WE HAVE HELPED COUNTLESS BUSINESSES WITH OUR PRODUCTS & SERVICES
           </h2>
           <p className="text-lg text-[#1B1B1B] leading-relaxed mb-12">
-            At ApexSteel Inc., we are dedicated to delivering high-quality steel products and services to meet the
+            At KinageLifts, we are dedicated to delivering high-quality elevator and escalator solutions to meet the
             diverse needs of businesses across industries.
           </p>
 

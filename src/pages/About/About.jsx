@@ -26,13 +26,13 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-gray-700">
                 <p className="text-lg leading-relaxed">
-                  Founded with a vision to revolutionize vertical transportation, Kinage Lifts has been at the forefront of elevator and lift innovation for over two decades. We specialize in providing comprehensive solutions that combine cutting-edge technology with exceptional service.
+                  Kinage Lifts and Escalators is a leading provider of cutting-edge vertical and horizontal mobility solutions, specializing in the importation, distribution, installation, and maintenance of elevators, escalators, moving walkways, dumb waiters, and chair lifts.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Our commitment to excellence drives us to deliver safe, reliable, and efficient elevator systems that meet the unique needs of our clients. From residential buildings to commercial complexes, we have the expertise to handle projects of any scale.
+                  We partner with top-tier international manufacturers to supply high-quality, reliable, and innovative mobility systems tailored for residential, commercial, and industrial applications. Our comprehensive services ensure seamless integration from initial consultation to ongoing maintenance.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  With a team of skilled engineers, technicians, and support staff, we ensure that every installation, maintenance, and modernization project is completed to the highest standards of quality and safety.
+                  Backed by a team of certified engineers and technicians, we guarantee compliance with industry standards, timely project execution, and 24/7 maintenance support. We are dedicated to elevating movement—safely, smoothly, and sustainably.
                 </p>
               </div>
             </div>

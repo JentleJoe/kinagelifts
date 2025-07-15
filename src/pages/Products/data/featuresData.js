@@ -4,36 +4,29 @@ export const featuresData = [
   {
     id: 1,
     icon: Layers,
-    title: "Uncompromising Quality",
+    title: "Safety First",
     description:
-      "Our commitment to quality is unwavering. We adhere to the highest industry standards to ensure that our steel products are durable, reliable, and perform exceptionally in all applications. Our rigorous quality control processes guarantee that you receive only the best.",
+      "Our commitment to safety is unwavering. We ensure all elevator and escalator systems comply with international safety standards and regulations. Our certified engineers implement rigorous safety protocols to guarantee secure and reliable vertical transportation.",
   },
   {
     id: 2,
     icon: Grid3x3,
-    title: "Innovative Solutions",
+    title: "Advanced Technology",
     description:
-      "We are at the forefront of innovation in the steel industry. Our Research and Development team is constantly exploring new technologies and methodologies to improve our products and services. This dedication to innovation allows us to provide cutting-edge solutions that meet your specific needs.",
-  },
-  {
-    id: 2, // As per the image, the third card is also numbered '2'
-    icon: Grid3x3,
-    title: "Innovative Solutions",
-    description:
-      "We are at the forefront of innovation in the steel industry. Our Research and Development team is constantly exploring new technologies and methodologies to improve our products and services. This dedication to innovation allows us to provide cutting-edge solutions that meet your specific needs.",
+      "We partner with top-tier international manufacturers to provide cutting-edge elevator and escalator technology. Our systems feature energy-efficient motors, smart controls, and modern safety features that enhance performance and user experience.",
   },
   {
     id: 3,
     icon: Diamond,
-    title: "Comprehensive Product Range",
+    title: "Comprehensive Solutions",
     description:
-      "We are at the forefront of innovation in the steel industry. Our Research and Development team is constantly exploring new technologies and methodologies to improve our products and services. This dedication to innovation allows us to provide cutting-edge solutions that meet your specific needs.",
+      "From elevators and escalators to moving walkways, dumb waiters, and chair lifts, we offer a complete range of vertical mobility solutions. Our services include importation, distribution, installation, maintenance, and modernization.",
   },
   {
     id: 4,
     icon: Shapes,
-    title: "Customized Services",
+    title: "Customized Design",
     description:
-      "Every project is unique, and we tailor our services to meet your specific requirements. Our expert team works closely with you to understand your needs and deliver customized solutions that enhance your project's efficiency and success.",
+      "Every building is unique, and we tailor our mobility solutions to meet your specific requirements. Our expert team works closely with you to design and install elevator and escalator systems that perfectly match your architectural and functional needs.",
   },
 ]

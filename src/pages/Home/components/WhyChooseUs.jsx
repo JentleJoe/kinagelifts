@@ -11,8 +11,8 @@ const WhyChooseUs = () => {
             WHY CHOOSE US
           </h2>
           <p className="text-lg text-[#1B1B1B] leading-relaxed">
-            At ApexSteel Inc., we understand that choosing the right steel supplier is crucial for the success of your
-            projects. Here are the reasons why ApexSteel Inc. stands out as your preferred partner in the steel industry
+            At KinageLifts, we understand that choosing the right elevator and escalator provider is crucial for the success of your
+            projects. Here are the reasons why KinageLifts stands out as your preferred partner in vertical mobility solutions
           </p>
         </div>
 

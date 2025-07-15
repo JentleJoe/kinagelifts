@@ -6,27 +6,27 @@ export const whyChooseUsData = [
     icon: Layers,
     title: "Uncompromising Quality",
     description:
-      "Every project is unique, and we tailor our services to meet your specific req. Our expert team works closely with you to understand your needs and deliver customized solutions that",
+      "We partner with top-tier international manufacturers to supply high-quality, reliable, and innovative mobility systems. Our certified engineers ensure every installation meets the highest industry standards for safety and performance.",
   },
   {
     id: 2,
     icon: Grid,
-    title: "Innovative Solutions",
+    title: "Comprehensive Services",
     description:
-      "Every project is unique, and we tailor our services to meet your specific req. Our expert team works closely with you to understand your needs and deliver customized solutions that",
+      "From importation and distribution to installation and maintenance, we provide end-to-end solutions. Our services include customized design, professional installation, routine maintenance, and emergency repairs for all mobility systems.",
   },
   {
     id: 3,
     icon: Diamond,
-    title: "Comprehensive Range",
+    title: "Expert Team",
     description:
-      "Every project is unique, and we tailor our services to meet your specific req. Our expert team works closely with you to understand your needs and deliver customized solutions that",
+      "Backed by certified engineers and technicians, we guarantee compliance with industry standards and timely project execution. Our team provides 24/7 maintenance support to ensure your systems operate smoothly and safely.",
   },
   {
     id: 4,
     icon: SlidersHorizontal,
-    title: "Customized Services",
+    title: "Customized Solutions",
     description:
-      "Every project is unique, and we tailor our services to meet your specific req. Our expert team works closely with you to understand your needs and deliver customized solutions that",
+      "Every project is unique, and we tailor our mobility solutions to meet your specific requirements. Our expert team works closely with you to deliver customized elevator and escalator systems for residential, commercial, and industrial applications.",
   },
 ]

@@ -1,50 +1,50 @@
 export const faqData = [
   {
     id: 1,
-    question: "Uncompromising Quality",
+    question: "What types of elevator and escalator systems do you provide?",
     answer:
-      "We adhere to the highest industry standards and employ rigorous quality control measures at every stage of production to ensure our steel products meet and exceed expectations.",
+      "We specialize in the importation, distribution, installation, and maintenance of elevators, escalators, moving walkways, dumb waiters, and chair lifts for residential, commercial, and industrial applications.",
   },
   {
     id: 2,
-    question: "Customized Services",
+    question: "Do you offer customized elevator and escalator solutions?",
     answer:
-      "Every project is unique, and we tailor our services to meet your specific requirements. Our expert team works closely with you to understand your needs and deliver customized solutions that enhance your project's efficiency and success.",
+      "Yes, every project is unique, and we tailor our mobility solutions to meet your specific requirements. Our expert team works closely with you to deliver customized elevator and escalator systems that enhance your building's efficiency and accessibility.",
   },
   {
     id: 3,
-    question: "Experienced Team",
+    question: "What maintenance services do you provide?",
     answer:
-      "Our team comprises highly skilled engineers, metallurgists, and technicians with decades of experience in the steel industry, ensuring expert guidance and execution for every project.",
+      "We provide comprehensive maintenance services including routine maintenance, emergency repairs, modernization, and retrofitting services. Our certified technicians offer 24/7 support to ensure your systems operate smoothly and safely.",
   },
   {
     id: 4,
-    question: "Reliable Delivery",
+    question: "Are your installations compliant with safety regulations?",
     answer:
-      "We pride ourselves on our efficient logistics and robust supply chain, guaranteeing timely and reliable delivery of your steel products, even for large-scale orders.",
+      "Absolutely. All our installations comply with industry safety standards and regulations. Our certified engineers and technicians ensure every system meets the highest safety requirements and building codes.",
   },
   {
     id: 5,
-    question: "Sustainability Commitment",
+    question: "What is your approach to sustainability?",
     answer:
-      "ApexSteel Inc. is committed to sustainable practices, utilizing eco-friendly production methods and responsible sourcing to minimize our environmental footprint.",
+      "KinageLifts is committed to sustainable practices, partnering with manufacturers who utilize eco-friendly production methods and energy-efficient technologies to minimize environmental impact while enhancing building accessibility.",
   },
   {
     id: 6,
-    question: "Customer-Centric Approach",
+    question: "How do you ensure timely project execution?",
     answer:
-      "Your satisfaction is our priority. We foster strong client relationships through transparent communication, personalized support, and a dedication to understanding and fulfilling your unique needs.",
+      "We pride ourselves on efficient project management and robust supply chain partnerships with international manufacturers, guaranteeing timely delivery and installation of your mobility systems, even for large-scale projects.",
   },
   {
     id: 7,
-    question: "Competitive Pricing",
+    question: "Do you offer competitive pricing?",
     answer:
-      "We offer competitive pricing without compromising on quality, providing exceptional value for your investment in premium steel products and services.",
+      "We offer competitive pricing without compromising on quality, providing exceptional value for your investment in premium elevator and escalator systems and services.",
   },
   {
     id: 8,
-    question: "Industry Expertise",
+    question: "What industries do you serve?",
     answer:
-      "With deep industry knowledge and a forward-thinking approach, we stay ahead of market trends and technological advancements to provide you with the most innovative and effective steel solutions.",
+      "We serve real estate developers, construction firms, hospitality providers, facility managers, and various other industries requiring vertical and horizontal mobility solutions for modern infrastructures.",
   },
 ]

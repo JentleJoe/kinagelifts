@@ -4,25 +4,25 @@ export const achievementsData = [
   {
     id: 1,
     icon: LayoutGrid,
-    value: "12,322",
-    label: "Factories",
+    value: "500+",
+    label: "Elevators Installed",
   },
   {
     id: 2,
     icon: DollarSign,
-    value: "30M",
-    label: "Revenue",
+    value: "15M",
+    label: "Projects Completed",
   },
   {
     id: 3,
     icon: Users,
-    value: "231",
-    label: "Customers",
+    value: "150+",
+    label: "Satisfied Clients",
   },
   {
     id: 4,
     icon: Grid3x3,
-    value: "500+",
-    label: "Steel Produced",
+    value: "24/7",
+    label: "Maintenance Support",
   },
 ]
