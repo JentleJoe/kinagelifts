@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
         heading: ['Bebas Neue', 'sans-serif'],
+        anton: ['Anton', 'sans-serif'],
       }
     },
   },

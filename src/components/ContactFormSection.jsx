@@ -45,7 +45,7 @@ const ContactFormSection = () => {
 
         {/* Right Column: Enquiry Form */}
         <div className="p-8 md:p-12">
-          <h2 className="text-3xl font-heading font-extrabold text-[#1B1B1B] mb-8 uppercase">MAKE AN ENQUIRY</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-[#1B1B1B] mb-8 uppercase">MAKE AN ENQUIRY</h2>
           <form className="space-y-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>

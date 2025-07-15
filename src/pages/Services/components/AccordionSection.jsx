@@ -11,7 +11,7 @@ const AccordionSection = () => {
 
   return (
     <section className="py-16 bg-[#F9F9F9] flex justify-center">
-      <div className="w-full max-w-3xl px-4 sm:px-6 lg:px-8 relative">
+      <div className="w-full max-w-3xl lg:max-w-5xl px-4 sm:px-6 lg:px-8 relative">
         {/* Removed the "Close" button */}
 
         {/* Accordion Items */}

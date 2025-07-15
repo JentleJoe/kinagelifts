@@ -17,7 +17,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Right Column: Feature Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
           {whyChooseUsData.map((feature) => (
             <FeatureCard key={feature.id} icon={feature.icon} title={feature.title} description={feature.description} />
           ))}
