@@ -4,29 +4,29 @@ export const whyChooseUsData = [
   {
     id: 1,
     icon: Layers,
-    title: "Uncompromising Quality",
+    title: "Direct Factory Access",
     description:
-      "We partner with top-tier international manufacturers to supply high-quality, reliable, and innovative mobility systems. Our certified engineers ensure every installation meets the highest industry standards for safety and performance.",
+      "We have direct access to Turkish, Japanese, and Chinese manufacturers, ensuring uncompromising quality and the ability to return items back to the factory if there's a fault. This unique relationship guarantees superior products and swift resolution of any issues.",
   },
   {
     id: 2,
     icon: Grid,
-    title: "Comprehensive Services",
+    title: "Complete Service Coverage",
     description:
-      "From importation and distribution to installation and maintenance, we provide end-to-end solutions. Our services include customized design, professional installation, routine maintenance, and emergency repairs for all mobility systems.",
+      "From importation and distribution to installation and maintenance, we provide end-to-end solutions. We also service existing equipment from other providers, ensuring comprehensive support regardless of your current setup.",
   },
   {
     id: 3,
     icon: Diamond,
-    title: "Expert Team",
+    title: "1-Year Installation Warranty",
     description:
-      "Backed by certified engineers and technicians, we guarantee compliance with industry standards and timely project execution. Our team provides 24/7 maintenance support to ensure your systems operate smoothly and safely.",
+      "We offer a comprehensive 1-year warranty on all our installations. If there's any fault with the equipment within a year of installation, we provide free repairs, demonstrating our confidence in our workmanship and quality.",
   },
   {
     id: 4,
     icon: SlidersHorizontal,
-    title: "Customized Solutions",
+    title: "10 Years of Excellence",
     description:
-      "Every project is unique, and we tailor our mobility solutions to meet your specific requirements. Our expert team works closely with you to deliver customized elevator and escalator systems for residential, commercial, and industrial applications.",
+      "With over 10 years of experience in the elevator and escalator industry, we've built strong partnerships with Turkish, Japanese, and Chinese manufacturers. Our decade of expertise ensures reliable, customized solutions for every project.",
   },
 ]

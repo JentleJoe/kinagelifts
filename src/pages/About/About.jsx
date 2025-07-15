@@ -26,13 +26,13 @@ const About = () => {
               </h2>
               <div className="space-y-6 text-gray-700">
                 <p className="text-lg leading-relaxed">
-                  Kinage Lifts and Escalators is a leading provider of cutting-edge vertical and horizontal mobility solutions, specializing in the importation, distribution, installation, and maintenance of elevators, escalators, moving walkways, dumb waiters, and chair lifts.
+                  With over 10 years of experience, KinageLifts has built strong partnerships with top-tier manufacturers from Turkey, Japan, and China. Our direct access to these manufacturing facilities allows us to ensure quality control and swift resolution of any issues.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  We partner with top-tier international manufacturers to supply high-quality, reliable, and innovative mobility systems tailored for residential, commercial, and industrial applications. Our comprehensive services ensure seamless integration from initial consultation to ongoing maintenance.
+                  We specialize in the importation, distribution, installation, and maintenance of elevators, escalators, moving walkways, dumb waiters, and chair lifts for residential, commercial, and industrial applications. Our comprehensive services include maintenance for existing equipment, even from other providers.
                 </p>
                 <p className="text-lg leading-relaxed">
-                  Backed by a team of certified engineers and technicians, we guarantee compliance with industry standards, timely project execution, and 24/7 maintenance support. We are dedicated to elevating movement—safely, smoothly, and sustainably.
+                  What sets us apart is our 1-year installation warranty - if there's any fault with the equipment within a year of installation, we provide free repairs. This demonstrates our confidence in our workmanship and commitment to customer satisfaction.
                 </p>
               </div>
             </div>

@@ -10,8 +10,8 @@ export const achievementsData = [
   {
     id: 2,
     icon: DollarSign,
-    value: "15M",
-    label: "Projects Completed",
+    value: "10+",
+    label: "Years Experience",
   },
   {
     id: 3,

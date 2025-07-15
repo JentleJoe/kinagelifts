@@ -57,13 +57,14 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <div className="w-8 h-8 flex items-center justify-center">
+            <div className="w-8 h-8 flex items-center justify-center mr-3">
               <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="3" />
                 <path d="M12 1v6m0 6v6" />
                 <path d="m21 12-6-3-6 3-6-3" />
               </svg>
             </div>
+            <h3 className="text-2xl font-bold text-white">KinageLifts</h3>
           </Link>
         </div>
 

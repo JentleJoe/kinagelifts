@@ -14,8 +14,8 @@ const FAQSection = () => {
     <section className="py-16 bg-[#F9F9F9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
         {/* Left Column: FAQ Accordion */}
-        <div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-[#1B1B1B] leading-tight mb-8 uppercase">
+        <div className="text-left">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-[#1B1B1B] leading-tight mb-8 uppercase text-left">
             YOUR QUESTIONS ANSWERED: FAQS ABOUT STEEL PRODUCTS AND SERVICES
           </h2>
           <div className="space-y-4">
