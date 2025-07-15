@@ -23,7 +23,7 @@ const Footer = () => {
                   <path d="m21 12-6-3-6 3-6-3" />
                 </svg>
               </div>
-            <h3 className="text-2xl font-bold">ApexSteel Inc.</h3>
+            <h3 className="text-2xl font-bold">KinageLifts</h3>
             </div>
             <p className="text-gray-300 leading-relaxed mb-8">
               Experience industrial excellence with IAL. Our precision-engineered tapes elevate performance across diverse
