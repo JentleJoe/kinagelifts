@@ -1,30 +1,30 @@
 export const maintenanceServicesData = [
   {
     id: 1,
-    title: "MIG Welding:",
+    title: "All-Brand Service:",
     description:
-      "Ideal for large-scale projects, our MIG welding services ensure strong and efficient welds for various applications.",
+      "We provide comprehensive maintenance services for all elevator and lift brands, not just our own installations, ensuring optimal performance regardless of manufacturer.",
     link: "#",
   },
   {
     id: 2,
-    title: "TIG Welding:",
+    title: "Preventive Maintenance:",
     description:
-      "For more precise and high-quality welds, our TIG welding services are perfect for intricate and delicate projects.",
+      "Regular scheduled maintenance to prevent issues before they occur, extending equipment lifespan and ensuring consistent performance and safety.",
     link: "#",
   },
   {
     id: 3,
-    title: "Stick Welding:",
+    title: "Emergency Repairs:",
     description:
-      "Versatile and reliable, our stick welding services are suitable for a wide range of steel welding needs.",
+      "24/7 technical support with rapid response times for urgent repairs and maintenance issues to minimize downtime and restore service quickly.",
     link: "#",
   },
   {
     id: 4,
-    title: "On-Site Welding:",
+    title: "Modernization Services:",
     description:
-      "We offer mobile welding services to meet your requirements directly at your project site, ensuring convenience and efficiency.",
+      "Upgrade existing elevator systems with modern technology and safety features to improve performance, efficiency, and compliance with current standards.",
     link: "#",
   },
 ]

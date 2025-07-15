@@ -1,30 +1,30 @@
 export const installationServicesData = [
   {
     id: 1,
-    title: "Custom Steel Structures:",
+    title: "Professional Assessment:",
     description:
-      "We fabricate a wide range of steel structures, including beams, columns, trusses, and frames, to meet the unique needs of your construction projects.",
+      "Our expert team conducts comprehensive site assessments to determine the optimal elevator or lift solution for your specific requirements and building structure.",
     link: "#",
   },
   {
     id: 2,
-    title: "Precision Cutting and Shaping:",
+    title: "Premium Equipment Installation:",
     description:
-      "Using state-of-the-art equipment, we ensure precise cutting and shaping of steel to create components that fit perfectly within your designs.",
+      "We install high-quality elevators, escalators, moving walkways, dumb waiters, and chair lifts from our trusted Turkish, Japanese, and Chinese manufacturing partners.",
     link: "#",
   },
   {
     id: 3,
-    title: "Component Assembly:",
+    title: "Safety Compliance:",
     description:
-      "Our team excels in assembling complex steel components, ensuring structural integrity and durability for your projects.",
+      "All installations meet international safety standards and regulations, ensuring optimal performance and user safety from day one.",
     link: "#",
   },
   {
     id: 4,
-    title: "Finishing Services:",
+    title: "1-Year Installation Warranty:",
     description:
-      "We offer various finishing options, including painting and galvanizing, to enhance the appearance and longevity of your fabricated steel products.",
+      "We provide a comprehensive 1-year warranty on all installations. If any equipment fault occurs within the first year, we provide free repairs at no additional cost.",
     link: "#",
   },
 ]
