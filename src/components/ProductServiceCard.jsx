@@ -4,21 +4,23 @@ const ProductServiceCard = ({ image, title, link }) => {
       <div className="w-full h-[220px] sm:h-[240px] md:h-[260px] overflow-hidden">
         <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
       </div>
-      <div className="p-3 sm:p-4 flex justify-between items-center">
-        <h3 className="text-base sm:text-lg font-semibold text-[#1B1B1B] truncate mr-2">{title}</h3>
+      <div className="flex">
+        <div className="flex-1 p-3 sm:p-4 flex items-center">
+          <h3 className="text-base sm:text-lg font-semibold text-[#1B1B1B] truncate">{title}</h3>
+        </div>
         <a
           href={link}
-          className="flex-none w-8 h-8 sm:w-10 sm:h-10 bg-[#1B1B1B] text-white flex items-center justify-center hover:bg-gray-700 transition-colors group"
+          className="flex-none bg-[#1B1B1B] text-white flex items-center justify-center hover:bg-gray-700 transition-colors group px-3 sm:px-4"
           aria-label={`Learn more about ${title}`}
         >
           <svg
-            className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" // Slanted arrow effect
+            className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17L17 7M17 7H7M17 7V17"></path>
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m2 22 20-20m-11 0h11m0 0v11"></path>
           </svg>
         </a>
       </div>
