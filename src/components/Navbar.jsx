@@ -5,6 +5,7 @@ import { navigationData } from "../data/navigationData"
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null)
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const handleMouseEnter = (index) => {
     setHoveredItem(index)
@@ -14,18 +15,28 @@ const Navbar = () => {
     setHoveredItem(null)
   }
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false)
+  }
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-20 backdrop-blur-sm">
       <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 py-6 max-w-7xl mx-auto">
         {/* Logo */}
         <div className="flex items-center">
-          <div className="w-8 h-8 flex items-center justify-center">
-            <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="12" r="3" />
-              <path d="M12 1v6m0 6v6" />
-              <path d="m21 12-6-3-6 3-6-3" />
-            </svg>
-          </div>
+          <Link to="/" className="flex items-center">
+            <div className="w-8 h-8 flex items-center justify-center">
+              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="3" />
+                <path d="M12 1v6m0 6v6" />
+                <path d="m21 12-6-3-6 3-6-3" />
+              </svg>
+            </div>
+          </Link>
         </div>
 
         {/* Navigation Menu */}
@@ -61,11 +72,38 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button className="text-white">
+          <button onClick={toggleMobileMenu} className="text-white">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
             </svg>
           </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`md:hidden bg-black bg-opacity-20 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden ${
+        isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+      }`}>
+        <div className="px-4 pt-2 pb-6 space-y-1">
+          {navigationData.map((item) => (
+            <Link
+              key={item.label}
+              to={item.href}
+              className="block px-3 py-2 text-white hover:text-gray-300 transition-colors font-medium"
+              onClick={closeMobileMenu}
+            >
+              {item.label}
+            </Link>
+          ))}
+          <div className="pt-4">
+            <Link 
+              to="/contact" 
+              className="block w-full border border-white text-white px-6 py-2 hover:bg-white hover:text-black transition-colors font-medium text-center"
+              onClick={closeMobileMenu}
+            >
+              CONTACT US
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
