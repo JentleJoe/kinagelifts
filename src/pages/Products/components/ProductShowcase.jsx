@@ -1,9 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { productsData } from '../data/productsData';
 
 const ProductShowcase = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeCategory, setActiveCategory] = useState('elevators');
   const [activeSubcategory, setActiveSubcategory] = useState(null);
+
+  // Initialize category from URL params
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam && productsData[categoryParam]) {
+      setActiveCategory(categoryParam);
+    }
+  }, [searchParams]);
 
   const categories = Object.keys(productsData);
   const currentCategory = productsData[activeCategory];
@@ -11,6 +21,8 @@ const ProductShowcase = () => {
   const handleCategoryClick = (category) => {
     setActiveCategory(category);
     setActiveSubcategory(null);
+    // Update URL params
+    setSearchParams({ category });
   };
 
   const handleSubcategoryClick = (subcategoryId) => {

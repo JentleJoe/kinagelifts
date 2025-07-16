@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const ProductServiceCard = ({ image, title, link }) => {
   return (
     <div className="flex-none w-[280px] sm:w-[300px] md:w-[320px] bg-white shadow-sm overflow-hidden flex flex-col">
@@ -8,8 +10,8 @@ const ProductServiceCard = ({ image, title, link }) => {
         <div className="flex-1 p-3 sm:p-4 flex items-center">
           <h3 className="text-base sm:text-lg font-semibold text-[#1B1B1B] truncate">{title}</h3>
         </div>
-        <a
-          href={link}
+        <Link
+          to={link}
           className="flex-none bg-[#1B1B1B] text-white flex items-center justify-center hover:bg-gray-700 transition-colors group px-3 sm:px-4"
           aria-label={`Learn more about ${title}`}
         >
@@ -22,7 +24,7 @@ const ProductServiceCard = ({ image, title, link }) => {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m2 22 20-20m-11 0h11m0 0v11"></path>
           </svg>
-        </a>
+        </Link>
       </div>
     </div>
   )

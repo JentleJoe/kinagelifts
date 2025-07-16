@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Hero from './components/Hero';
 import ProductServiceSection from './components/ProductsServiceSection';
 import Achievements from './components/Achievements';
@@ -19,25 +20,37 @@ const Home = () => {
       id: 1,
       title: "Passenger Elevators",
       image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      link: "/products/passenger-elevators"
+      link: "/products?category=elevators"
     },
     {
       id: 2,
       title: "Freight Elevators",
       image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      link: "/products/freight-elevators"
+      link: "/products?category=elevators"
     },
     {
       id: 3,
       title: "Escalators",
       image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      link: "/products/escalators"
+      link: "/products?category=escalators"
     },
     {
       id: 4,
       title: "Dumbwaiters",
       image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      link: "/products/dumbwaiters"
+      link: "/products?category=specialized"
+    },
+    {
+      id: 5,
+      title: "Moving Walkways",
+      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      link: "/products?category=escalators"
+    },
+    {
+      id: 6,
+      title: "Stairlifts",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      link: "/products?category=specialized"
     }
   ];
 
@@ -46,19 +59,19 @@ const Home = () => {
       id: 1,
       title: "Installation Services",
       image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      link: "/services/installation"
+      link: "/services"
     },
     {
       id: 2,
       title: "Maintenance & Repair",
       image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      link: "/services/maintenance"
+      link: "/services"
     },
     {
       id: 3,
       title: "Modernization",
       image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
-      link: "/services/modernization"
+      link: "/services"
     }
   ];
 
@@ -71,6 +84,21 @@ const Home = () => {
         items={productsData} 
         showNavigation={true} 
       />
+      
+      {/* View All Products CTA */}
+      <section className="py-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Link 
+            to="/products" 
+            className="inline-flex items-center space-x-2 text-[#1B1B1B] hover:text-gray-600 transition-colors font-semibold text-lg"
+          >
+            <span>View All Products</span>
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </Link>
+        </div>
+      </section>
       
       {/* CTA Section after Products */}
       <section className="py-16 bg-[#1B1B1B] text-white">
@@ -127,12 +155,12 @@ const Home = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
                 </svg>
               </button>
-              <a href="/services" className="text-[#1B1B1B] hover:text-gray-600 transition-colors font-semibold flex items-center space-x-2">
+              <Link to="/services" className="text-[#1B1B1B] hover:text-gray-600 transition-colors font-semibold flex items-center space-x-2">
                 <span>View All Services</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
