@@ -10,11 +10,17 @@ const Achievements = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
-          setIsVisible(true)
-          startCountingAnimation()
+          // Only start animation when section is at least 50% visible
+          if (entry.intersectionRatio >= 0.5) {
+            setIsVisible(true)
+            startCountingAnimation()
+          }
         }
       },
-      { threshold: 0.3 }
+      { 
+        threshold: [0.3, 0.5, 0.7], // Multiple thresholds for better detection
+        rootMargin: '-50px 0px -50px 0px' // Ensure section is well within viewport
+      }
     )
 
     if (sectionRef.current) {
