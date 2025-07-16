@@ -28,7 +28,6 @@ const MaintenanceService = () => {
                   key={service.id}
                   title={service.title}
                   description={service.description}
-                  link={service.link}
                 />
               ))}
             </div>

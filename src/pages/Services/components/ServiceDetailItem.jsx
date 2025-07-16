@@ -1,10 +1,14 @@
-const ServiceDetailItem = ({ title, description, link }) => {
+const ServiceDetailItem = ({ title, description }) => {
+  const scrollToContact = () => {
+    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="py-6 border-b border-gray-200 last:border-b-0">
       <h3 className="text-xl font-bold text-[#1B1B1B] mb-2">{title}</h3>
       <p className="text-gray-700 leading-relaxed mb-4">{description}</p>
-      <a
-        href={link}
+      <button
+        onClick={scrollToContact}
         className="inline-flex items-center space-x-2 text-[#1B1B1B] border border-gray-800 px-4 py-2 hover:bg-gray-50 transition-colors group" // Changed border-gray-300 to border-gray-800
       >
         <span>LEARN MORE</span>
@@ -17,7 +21,7 @@ const ServiceDetailItem = ({ title, description, link }) => {
         >
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m4 20 16-16m-9 0h9m0 0v9"></path>
         </svg>
-      </a>
+      </button>
     </div>
   )
 }

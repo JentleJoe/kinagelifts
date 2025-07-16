@@ -30,7 +30,6 @@ const InstallationService = () => {
                   key={service.id}
                   title={service.title}
                   description={service.description}
-                  link={service.link}
                 />
               ))}
             </div>
