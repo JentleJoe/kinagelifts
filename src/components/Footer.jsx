@@ -1,7 +1,10 @@
 import { MessageCircle, Phone, Mail } from "lucide-react"
-import { footerProducts, footerMenu } from "../data/footerLinks"
+import { Link } from "react-router-dom"
+import { footerProducts, footerServices, footerMenu } from "../data/footerLinks"
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
   return (
     <footer className="bg-[#1B1B1B] text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-4 gap-12">
@@ -32,32 +35,31 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-wrap gap-6 text-gray-300">
-            <a href="tel:12001544864" className="flex items-center space-x-2 hover:text-white transition-colors">
+            <a href="https://wa.me/2348103664912" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors">
               <MessageCircle className="w-5 h-5" />
-              <span>1200 154 4864</span>
+              <span>+234 810 366 4912</span>
             </a>
-            <a href="tel:48122638745" className="flex items-center space-x-2 hover:text-white transition-colors">
+            <a href="tel:+2348103664912" className="flex items-center space-x-2 hover:text-white transition-colors">
               <Phone className="w-5 h-5" />
-              <span>4812 263 8745</span>
+              <span>+234 810 366 4912</span>
             </a>
             <a
-              href="mailto:info@kinagelifts.com"
+              href="mailto:kinagelifts@gmail.com"
               className="flex items-center space-x-2 hover:text-white transition-colors"
             >
               <Mail className="w-5 h-5" />
-              <span>info@kinagelifts.com</span>
+              <span>kinagelifts@gmail.com</span>
             </a>
           </div>
         </div>
 
         {/* Newsletter & Navigation Links */}
-        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Newsletter */}
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <h3 className="text-xl font-bold mb-4">Subscribe to our newsletter</h3>
             <p className="text-gray-300 leading-relaxed text-sm mb-6">
-              Join our community and be part of the journey toward sustainable luxury living. Fill out the form below to
-              subscribe
+              Stay updated with the latest elevator and escalator solutions, maintenance tips, and industry news. Subscribe to our newsletter for exclusive updates.
             </p>
             <form className="flex">
               <input
@@ -84,9 +86,23 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerProducts.map((item) => (
                 <li key={item.label}>
-                  <a href={item.href} className="text-gray-300 hover:text-white transition-colors">
+                  <Link to={item.href} className="text-gray-300 hover:text-white transition-colors">
                     {item.label}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services Links */}
+          <div>
+            <h4 className="text-lg font-bold mb-4">Services</h4>
+            <ul className="space-y-3">
+              {footerServices.map((item) => (
+                <li key={item.label}>
+                  <Link to={item.href} className="text-gray-300 hover:text-white transition-colors">
+                    {item.label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -98,12 +114,35 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerMenu.map((item) => (
                 <li key={item.label}>
-                  <a href={item.href} className="text-gray-300 hover:text-white transition-colors">
+                  <Link to={item.href} className="text-gray-300 hover:text-white transition-colors">
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </div>
+      
+      {/* Copyright Section */}
+      <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            <div className="flex items-center space-x-1 mb-4 md:mb-0">
+              <span>Built by</span>
+              <a 
+                href="https://peakbrand.agency" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white font-medium hover:text-gray-300 transition-colors flex items-center space-x-1"
+              >
+                <span>peakbrand.agency</span>
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
+            <p>&copy; {currentYear} KinageLifts. All rights reserved.</p>
           </div>
         </div>
       </div>

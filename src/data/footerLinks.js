@@ -1,21 +1,20 @@
 export const footerProducts = [
-  { label: "Stainless Steel", href: "#" },
-  { label: "Carbon Steel", href: "#" },
-  { label: "Galvanized Steel", href: "#" },
-  { label: "Elements", href: "#" },
+  { label: "Elevators", href: "/products?category=elevators" },
+  { label: "Escalators", href: "/products?category=escalators" },
+  { label: "Dumbwaiters", href: "/products?category=dumbwaiters" },
+  { label: "Goods Lifts", href: "/products?category=goods-lifts" },
 ]
 
-export const footerLocations = [
-  { label: "US", href: "#" },
-  { label: "Nederland", href: "#" },
-  { label: "Germany", href: "#" },
-  { label: "Australia", href: "#" },
-  { label: "UK", href: "#" },
+export const footerServices = [
+  { label: "Installation", href: "/services#installation" },
+  { label: "Maintenance", href: "/services#maintenance" },
+  { label: "Modernization", href: "/services#modernization" },
+  { label: "Repair", href: "/services#repair" },
 ]
 
 export const footerMenu = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "News", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Contact", href: "/contact" },
 ]
