@@ -27,11 +27,4 @@ export const navigationData = [
     description:
       "Learn about Kinage Lifts' history, mission, and values. Discover how our experienced team and state-of-the-art technology make us your trusted elevator partner.",
   },
-  {
-    label: "Contact Us",
-    href: "/contact",
-    title: "GET IN TOUCH",
-    description:
-      "Get in touch with our expert team for quotes, consultations, or any inquiries about our elevator and lift products and services. We're here to help with your project needs.",
-  },
 ]

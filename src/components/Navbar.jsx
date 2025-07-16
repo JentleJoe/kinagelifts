@@ -57,14 +57,14 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
-            <div className="w-8 h-8 flex items-center justify-center mr-3">
-              <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <div className="w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center mr-2 sm:mr-3">
+              <svg className="w-4 h-4 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <circle cx="12" cy="12" r="3" />
                 <path d="M12 1v6m0 6v6" />
                 <path d="m21 12-6-3-6 3-6-3" />
               </svg>
             </div>
-            <h3 className="text-2xl font-bold text-white">KinageLifts</h3>
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">KinageLifts</h3>
           </Link>
         </div>
 
@@ -93,7 +93,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <Link 
             to="/contact" 
-            className="border border-white text-white px-6 py-2 hover:bg-white hover:text-black transition-colors font-medium inline-block"
+            className="border border-white text-white px-4 py-2 hover:bg-white hover:text-black transition-colors font-medium inline-block"
           >
             CONTACT US
           </Link>
