@@ -5,6 +5,7 @@ import AccordionSection from "./components/AccordionSection";
 import ContactFormSection from "../../components/ContactFormSection";
 import ServiceProcedureSection from "./components/ServiceProcedureSection";
 import ServicesOverview from "./components/ServicesOverview";
+import FloatingCTA from "../../components/FloatingCTA";
 
 const Services = () => {
   return (
@@ -31,6 +32,7 @@ const Services = () => {
       <AccordionSection />
       <ContactFormSection />
       </div>
+      <FloatingCTA />
     </>
   );
 };
