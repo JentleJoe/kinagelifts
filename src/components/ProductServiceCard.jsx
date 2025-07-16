@@ -1,7 +1,7 @@
 const ProductServiceCard = ({ image, title, link }) => {
   return (
-    <div className="flex-none w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[320px] md:h-[320px] bg-white shadow-sm overflow-hidden flex flex-col">
-      <div className="w-full h-[220px] sm:h-[240px] md:h-[260px] overflow-hidden">
+    <div className="flex-none w-[280px] sm:w-[300px] md:w-[320px] bg-white shadow-sm overflow-hidden flex flex-col">
+      <div className="w-full h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden">
         <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="flex">
