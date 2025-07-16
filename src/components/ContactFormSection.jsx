@@ -11,7 +11,40 @@ const ContactFormSection = () => {
   }
 
   return (
-    <section className="py-16 bg-[#F9F9F9] flex justify-center items-center">
+    <>
+      {/* Contact Form Header */}
+      <section className="py-16 bg-[#1B1B1B] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4 uppercase">
+            Get Your Free Quote Today
+          </h2>
+          <p className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+            Fill out the form below and our experts will get back to you within 24 hours with a personalized quote for your elevator or escalator project.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-300">
+            <div className="flex items-center space-x-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>Free consultation</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>24-hour response</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              <span>No obligation</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-form" className="py-16 bg-[#F9F9F9] flex justify-center items-center">
       <div className="w-full max-w-7xl bg-white shadow-lg grid grid-cols-1 lg:grid-cols-2">
         {/* Left Column: Map */}
         <div className="relative h-[400px] lg:h-auto min-h-[400px]">
@@ -130,6 +163,7 @@ const ContactFormSection = () => {
         </div>
       </div>
     </section>
+    </>
   )
 }
 

@@ -66,7 +66,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Quality */}
-            <div className="p-8 rounded-lg shadow-md text-center">
+            <div className="p-8 rounded-lg bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 text-center">
               <div className="w-16 h-16 bg-[#1B1B1B] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -79,7 +79,7 @@ const About = () => {
             </div>
 
             {/* Safety */}
-            <div className="p-8 rounded-lg shadow-md text-center">
+            <div className="p-8 rounded-lg bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 text-center">
               <div className="w-16 h-16 bg-[#1B1B1B] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
@@ -92,7 +92,7 @@ const About = () => {
             </div>
 
             {/* Service */}
-            <div className="p-8 rounded-lg shadow-md text-center">
+            <div className="p-8 rounded-lg bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 text-center">
               <div className="w-16 h-16 bg-[#1B1B1B] rounded-full flex items-center justify-center mx-auto mb-6">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>

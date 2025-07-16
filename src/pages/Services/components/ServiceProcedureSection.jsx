@@ -17,7 +17,7 @@ const ServiceProcedureSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Step 1 */}
-          <div className="p-8 rounded-lg text-center shadow-sm">
+          <div className="p-8 rounded-lg text-center bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-[#1B1B1B] text-white rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold">1</span>
             </div>
@@ -31,7 +31,7 @@ const ServiceProcedureSection = () => {
           </div>
 
           {/* Step 2 */}
-          <div className="p-8 rounded-lg text-center shadow-sm">
+          <div className="p-8 rounded-lg text-center bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-[#1B1B1B] text-white rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold">2</span>
             </div>
@@ -45,7 +45,7 @@ const ServiceProcedureSection = () => {
           </div>
 
           {/* Step 3 */}
-          <div className="p-8 rounded-lg text-center shadow-sm">
+          <div className="p-8 rounded-lg text-center bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300">
             <div className="w-16 h-16 bg-[#1B1B1B] text-white rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-2xl font-bold">3</span>
             </div>

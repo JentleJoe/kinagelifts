@@ -16,7 +16,7 @@ const FAQSection = () => {
         {/* Left Column: FAQ Accordion */}
         <div className="text-left">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-[#1B1B1B] leading-tight mb-8 uppercase text-left">
-            YOUR QUESTIONS ANSWERED: FAQS ABOUT STEEL PRODUCTS AND SERVICES
+            YOUR QUESTIONS ANSWERED: FAQS ABOUT ELEVATOR AND ESCALATOR SOLUTIONS
           </h2>
           <div className="space-y-4">
             {faqData.map((faq, index) => (

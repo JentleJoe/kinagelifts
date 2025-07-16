@@ -32,7 +32,10 @@ const Hero = () => {
             </p>
 
             {/* CTA Button */}
-            <button className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-3 group">
+            <button 
+              onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-black px-8 py-4 font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-3 group"
+            >
               <span>ENQUIRE NOW</span>
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
