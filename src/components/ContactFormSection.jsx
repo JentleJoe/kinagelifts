@@ -71,20 +71,12 @@ const ContactFormSection = () => {
                 </div>
                 <div className="flex flex-col space-y-2 sm:text-right">
                   <a 
-                    href="https://wa.me/2348103664912" 
+                    href="https://wa.me/2348119051471" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors font-semibold text-sm text-center sm:text-left"
                   >
-                    +234 810 366 4912
-                  </a>
-                  <a 
-                    href="https://wa.me/2347067285046" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition-colors font-semibold text-sm text-center sm:text-left"
-                  >
-                    +234 706 728 5046
+                    +234 811 905 1471
                   </a>
                 </div>
               </div>

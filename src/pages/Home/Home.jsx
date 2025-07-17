@@ -211,7 +211,7 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a 
-              href="https://wa.me/2348103664912" 
+              href="https://wa.me/2348119051471" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-green-500 text-white px-8 py-4 font-semibold hover:bg-green-600 transition-colors flex items-center space-x-3 group"

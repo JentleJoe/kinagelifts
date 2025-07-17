@@ -3,14 +3,18 @@ import ContactFormSection from "../../components/ContactFormSection";
 import FloatingCTA from "../../components/FloatingCTA";
 
 const Contact = () => {
-  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [copiedPhone1, setCopiedPhone1] = useState(false);
+  const [copiedPhone2, setCopiedPhone2] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const copyToClipboard = (text, type) => {
     navigator.clipboard.writeText(text);
-    if (type === 'phone') {
-      setCopiedPhone(true);
-      setTimeout(() => setCopiedPhone(false), 2000);
+    if (type === 'phone1') {
+      setCopiedPhone1(true);
+      setTimeout(() => setCopiedPhone1(false), 2000);
+    } else if (type === 'phone2') {
+      setCopiedPhone2(true);
+      setTimeout(() => setCopiedPhone2(false), 2000);
     } else if (type === 'email') {
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2000);
@@ -31,7 +35,7 @@ const Contact = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
-                href="https://wa.me/2348103664912"
+                href="https://wa.me/2348119051471"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-500 text-white px-8 py-4 font-semibold hover:bg-green-600 transition-colors flex items-center space-x-3"
@@ -80,20 +84,12 @@ const Contact = () => {
               <p className="text-gray-500 text-sm mb-6">Average response time: 2 minutes</p>
               <div className="space-y-3">
                 <a 
-                  href="https://wa.me/2348103664912" 
+                  href="https://wa.me/2348119051471" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold"
                 >
-                  Start Chat - +234 810 366 4912
-                </a>
-                <a 
-                  href="https://wa.me/2347067285046" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="block bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold"
-                >
-                  Alternative - +234 706 728 5046
+                  Start Chat - +234 811 905 1471
                 </a>
               </div>
             </div>
@@ -109,18 +105,40 @@ const Contact = () => {
               <p className="text-gray-600 mb-4">Direct conversation with experts</p>
               <p className="text-gray-500 text-sm mb-6">Available: Mon-Fri 8AM-6PM</p>
               <div className="space-y-3">
-                <a 
-                  href="tel:+2348103664912" 
-                  className="block bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold"
-                >
-                  Call Now - +234 810 366 4912
-                </a>
-                <button 
-                  onClick={() => copyToClipboard('+2348103664912', 'phone')}
-                  className="block w-full bg-gray-50 border border-gray-400 text-gray-700 px-6 py-3 rounded-lg hover:bg-gray-100 hover:border-gray-500 transition-colors font-semibold shadow-sm"
-                >
-                  {copiedPhone ? 'Copied!' : 'Copy Number'}
-                </button>
+                <div className="flex items-center space-x-2">
+                  <a 
+                    href="tel:+2348103664912" 
+                    className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold flex items-center space-x-2"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <span>+234 810 366 4912</span>
+                  </a>
+                  <button
+                    onClick={() => copyToClipboard('+2348103664912', 'phone1')}
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-3 rounded-lg transition-colors font-medium"
+                  >
+                    {copiedPhone1 ? '✓' : '📋'}
+                  </button>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <a 
+                    href="tel:+2347067285046" 
+                    className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-semibold flex items-center space-x-2"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                    </svg>
+                    <span>+234 706 728 5046</span>
+                  </a>
+                  <button
+                    onClick={() => copyToClipboard('+2347067285046', 'phone2')}
+                    className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-3 rounded-lg transition-colors font-medium"
+                  >
+                    {copiedPhone2 ? '✓' : '📋'}
+                  </button>
+                </div>
               </div>
             </div>
 

@@ -35,9 +35,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="flex flex-wrap gap-6 text-gray-300">
-            <a href="https://wa.me/2348103664912" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors">
+            <a href="https://wa.me/2348119051471" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors">
               <MessageCircle className="w-5 h-5" />
-              <span>+234 810 366 4912</span>
+              <span>+234 811 905 1471</span>
             </a>
             <a href="tel:+2348103664912" className="flex items-center space-x-2 hover:text-white transition-colors">
               <Phone className="w-5 h-5" />

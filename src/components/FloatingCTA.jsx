@@ -14,7 +14,7 @@ const FloatingCTA = () => {
   }, []);
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/2348103664912', '_blank');
+    window.open('https://wa.me/2348119051471', '_blank');
   };
 
   if (!isVisible) return null;
