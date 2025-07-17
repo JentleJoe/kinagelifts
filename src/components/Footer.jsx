@@ -138,8 +138,8 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="group relative float-animation cursor-pointer inline-block"
               >
-                {/* Animated background glow with rainbow effect */}
-                <div className="absolute -inset-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-xl blur-sm opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-pulse rainbow-filter"></div>
+                {/* Animated background glow with rainbow effect - fixed z-index to stay behind text */}
+                <div className="absolute -inset-3 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-pulse rainbow-filter -z-10"></div>
                 
                 {/* Multiple floating sparkles with different animations */}
                 <div className="absolute -top-2 -left-2 w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100" style={{animation: 'sparkle-bounce 2s infinite 0.1s'}}></div>
@@ -150,8 +150,8 @@ const Footer = () => {
                 <div className="absolute bottom-1 left-12 w-1.5 h-1.5 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-600" style={{animation: 'sparkle-bounce 2s infinite 0.6s'}}></div>
                 
                 {/* Main content with enhanced styling */}
-                <div className="relative flex items-center space-x-2 px-4 py-3 rounded-xl border border-transparent group-hover:border-white/30 transition-all duration-500 group-hover:bg-white/10 group-hover:backdrop-blur-sm heartbeat-animation">
-                  <div className="relative overflow-hidden text-white font-bold text-lg hover:text-transparent bg-clip-text hover:bg-gradient-to-r hover:from-blue-400 hover:via-purple-400 hover:to-pink-400 transition-all duration-500 flex items-center space-x-2 glow-text">
+                <div className="relative flex items-center space-x-2 px-4 py-3 rounded-xl border border-transparent group-hover:border-white/30 transition-all duration-500 group-hover:bg-white/5 heartbeat-animation">
+                  <div className="relative overflow-hidden text-white font-bold text-lg transition-all duration-500 flex items-center space-x-2 glow-text">
                     {/* Multiple sliding underlines for depth */}
                     <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
                     <span className="absolute bottom-0.5 left-0 w-full h-0.5 bg-gradient-to-r from-pink-400 via-yellow-400 to-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-right delay-200"></span>
