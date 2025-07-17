@@ -1,5 +1,6 @@
 import ServiceDetailItem from "./ServiceDetailItem"
 import { installationServicesData } from "../data/installationServicesData"
+import installation2 from "../../../assets/installation2.png"
 
 const InstallationService = () => {
   return (
@@ -37,7 +38,7 @@ const InstallationService = () => {
           {/* Right Column: Image (No extra container, full height) - Always second on mobile */}
           <div className="flex justify-center lg:justify-end lg:order-2">
             <img
-              src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+              src={installation2}
               alt="Modern Glass Elevator Installation"
               className="w-full object-cover lg:h-[872px]"
             />
