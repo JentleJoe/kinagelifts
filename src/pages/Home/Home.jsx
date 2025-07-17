@@ -8,6 +8,19 @@ import WhyChooseUs from './components/WhyChooseUs';
 import ContactFormSection from '../../components/ContactFormSection';
 import FloatingCTA from '../../components/FloatingCTA';
 
+// Import local assets
+import movingWalkway from '../../assets/movingWalkway.png';
+import stairlift from '../../assets/stairlift.png';
+import elevator from '../../assets/elevator.png';
+import freightElevator from '../../assets/freightElevator.png';
+import escalator from '../../assets/escalator.png';
+import dumbwaiters from '../../assets/dumbwaiters.png';
+import maintenance from '../../assets/maintenance.png';
+import maintenance2 from '../../assets/maintenance2.png';
+import installation from '../../assets/installation.png';
+import modernization from '../../assets/modernization.png';
+import installation2 from '../../assets/installation2.png';
+
 const Home = () => {
   // Function to scroll to contact form
   const scrollToContact = () => {
@@ -19,37 +32,37 @@ const Home = () => {
     {
       id: 1,
       title: "Passenger Elevators",
-      image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: elevator,
       link: "/products?category=elevators"
     },
     {
       id: 2,
       title: "Freight Elevators",
-      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: freightElevator,
       link: "/products?category=elevators"
     },
     {
       id: 3,
       title: "Escalators",
-      image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: escalator,
       link: "/products?category=escalators"
     },
     {
       id: 4,
       title: "Dumbwaiters",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: dumbwaiters,
       link: "/products?category=specialized"
     },
     {
       id: 5,
       title: "Moving Walkways",
-      image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: movingWalkway,
       link: "/products?category=escalators"
     },
     {
       id: 6,
       title: "Stairlifts",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: stairlift,
       link: "/products?category=specialized"
     }
   ];
@@ -58,19 +71,19 @@ const Home = () => {
     {
       id: 1,
       title: "Installation Services",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: installation,
       link: "/services"
     },
     {
       id: 2,
       title: "Maintenance & Repair",
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: maintenance2,
       link: "/services"
     },
     {
       id: 3,
       title: "Modernization",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+      image: modernization,
       link: "/services"
     }
   ];
@@ -165,9 +178,9 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
-      <Achievements />
-      
+
+      <Achievements statsImage={maintenance} />
+
       {/* CTA Section after Achievements */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -197,7 +210,7 @@ const Home = () => {
       </section>
       
       <CustomerReviews />
-      <FAQSection />
+      <FAQSection faqImage={installation2} />
       <WhyChooseUs />
       
       {/* Final CTA Section before Contact */}

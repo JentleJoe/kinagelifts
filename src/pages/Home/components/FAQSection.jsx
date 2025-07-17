@@ -3,7 +3,7 @@ import FAQItem from "./FAQItem"
 import { faqData } from "../../../data/faqData"
 import { Grid3x3, LayoutGrid } from "lucide-react" // Reusing icons from achievements
 
-const FAQSection = () => {
+const FAQSection = ({ faqImage }) => {
   const [openIndex, setOpenIndex] = useState(null)
 
   const handleItemClick = (index) => {
@@ -36,7 +36,7 @@ const FAQSection = () => {
         <div className="relative flex justify-center lg:justify-end">
           <div className="bg-white shadow-sm">
             <img
-              src="https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+              src={faqImage}
               alt="Modern Glass Elevator in Corporate Building"
               className="w-full h-[400px] lg:h-[550px] lg:w-[500px] object-cover"
             />

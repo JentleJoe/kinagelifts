@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react"
 import { achievementsData } from "./data/achievementsData"
 
-const Achievements = () => {
+const Achievements = ({ statsImage }) => {
   const [isVisible, setIsVisible] = useState(false)
   const [animatedValues, setAnimatedValues] = useState({})
   const sectionRef = useRef(null)
@@ -92,7 +92,7 @@ const Achievements = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="bg-white shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
             <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+              src={statsImage}
               alt="Professional elevator technician working on modern lift system"
               className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
             />
