@@ -1,4 +1,5 @@
 import FloatingCTA from "../../components/FloatingCTA";
+import installation2 from "../../assets/installation2.png";
 
 const About = () => {
   return (
@@ -46,7 +47,7 @@ const About = () => {
             {/* Image */}
             <div className="lg:order-first">
               <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src={installation2}
                 alt="Modern elevator installation"
                 className="w-full h-[500px] object-cover rounded-lg shadow-lg"
               />
