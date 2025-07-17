@@ -1,15 +1,27 @@
+// Import local assets
+import movingWalkway from '../../../assets/movingWalkway.png';
+import homeElevator from '../../../assets/homeElevator.png';
+import elevator from '../../../assets/elevator.png';
+import freightElevator from '../../../assets/freightElevator.png';
+import stairlift from '../../../assets/stairlift.png';
+import wheelchairLift from '../../../assets/wheelchairLift.png';
+import dumbwaiters from '../../../assets/dumbwaiters.png';
+import maintenance from '../../../assets/maintenance.png';
+import maintenance2 from '../../../assets/maintenance2.png';
+import escalator from '../../../assets/escalator.png';
+
 export const productsData = {
   elevators: {
     id: 1,
     category: "Elevators",
     description: "Premium elevator solutions for residential, commercial, and industrial applications",
-    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: homeElevator,
     subcategories: [
       {
         id: 1,
         name: "Passenger Elevators",
         description: "Reliable vertical transportation for people in buildings of all sizes",
-        image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: elevator,
         products: [
           {
             name: "Standard (Low/Mid/High-Rise)",
@@ -42,7 +54,7 @@ export const productsData = {
         id: 2,
         name: "Freight Elevators",
         description: "Heavy-duty elevators designed for transporting goods and materials",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: freightElevator,
         products: [
           {
             name: "Industrial/Heavy-Duty",
@@ -65,7 +77,7 @@ export const productsData = {
         id: 3,
         name: "Home Elevators",
         description: "Residential elevator solutions for private homes and small buildings",
-        image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: homeElevator,
         products: [
           {
             name: "Compact (Pneumatic/Vacuum)",
@@ -90,13 +102,13 @@ export const productsData = {
     id: 2,
     category: "Escalators & Moving Walkways",
     description: "Modern escalator and moving walkway systems for seamless horizontal and vertical movement",
-    image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: escalator,
     subcategories: [
       {
         id: 1,
         name: "Escalators",
         description: "Efficient vertical transportation for high-traffic areas",
-        image: "https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: escalator,
         products: [
           {
             name: "Standard (Indoor/Outdoor)",
@@ -119,7 +131,7 @@ export const productsData = {
         id: 2,
         name: "Moving Walkways (Travelators)",
         description: "Horizontal transportation systems for long-distance movement",
-        image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: movingWalkway,
         products: [
           {
             name: "Horizontal (Flat)",
@@ -139,13 +151,13 @@ export const productsData = {
     id: 3,
     category: "Specialized Mobility Equipment",
     description: "Specialized lifting and mobility solutions for unique applications",
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: dumbwaiters,
     subcategories: [
       {
         id: 1,
         name: "Dumb Waiters",
         description: "Small freight elevators for transporting goods between floors",
-        image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: dumbwaiters,
         products: [
           {
             name: "Manual/Electric",
@@ -168,7 +180,7 @@ export const productsData = {
         id: 2,
         name: "Stairlifts & Chair Elevators",
         description: "Mobility solutions for stairs and accessibility needs",
-        image: "https://images.unsplash.com/photo-1559757175-0eb30cd51721?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: stairlift,
         products: [
           {
             name: "Straight-Rail (Residential)",
@@ -191,7 +203,7 @@ export const productsData = {
         id: 3,
         name: "Wheelchair Lifts",
         description: "Specialized lifts for wheelchair accessibility",
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: wheelchairLift,
         products: [
           {
             name: "Vertical Platform Lifts (VPLs)",
@@ -211,13 +223,13 @@ export const productsData = {
     id: 4,
     category: "Components & Modernization",
     description: "Spare parts, components, and modernization services for existing systems",
-    image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: maintenance2,
     subcategories: [
       {
         id: 1,
         name: "Spare Parts & Components",
         description: "Quality replacement parts and components for all elevator systems",
-        image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: maintenance2,
         products: [
           {
             name: "Doors, Controllers, Buttons",
@@ -235,7 +247,7 @@ export const productsData = {
         id: 2,
         name: "Retrofitting & Upgrades",
         description: "Modernization services to upgrade existing elevator systems",
-        image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60",
+        image: maintenance,
         products: [
           {
             name: "Energy-Efficient Modernization",
