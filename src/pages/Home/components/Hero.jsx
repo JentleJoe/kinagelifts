@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import escalatorImg from '../../../assets/escalator.png';
+import heroVideo from '../../../assets/herovideo.mp4';
 
 const phrases = [
   "ELEVATOR SOLUTIONS",
@@ -50,19 +52,27 @@ const Hero = () => {
   }, [])
 
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center bg-no-repeat w-full"
-      style={{
-        backgroundImage:
-          "url('/placeholder.svg?height=1080&width=1920&text=Dark+Industrial+Background&bg=1a1a1a&color=666')",
-        marginLeft: "calc(-50vw + 50%)",
-        marginRight: "calc(-50vw + 50%)",
-        maxWidth: "100vw",
-        width: "100vw",
-      }}
-    >
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Video Background */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        src={heroVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={escalatorImg}
+        aria-label="Elevator and escalator video background"
+      />
+      {/* Fallback image for browsers that do not support video */}
+      <img
+        src={escalatorImg}
+        alt="Escalator placeholder"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{ display: 'none' }}
+      />
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
       {/* Hero Content */}
       <div className="relative z-10 flex items-center min-h-screen">
@@ -116,7 +126,6 @@ const Hero = () => {
             transform: translateY(0);
           }
         }
-        
         .animate-fade-in {
           animation: fade-in 1s ease-out 1s forwards;
         }
