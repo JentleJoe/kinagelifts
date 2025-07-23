@@ -10,16 +10,13 @@ const Achievements = ({ statsImage }) => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting && !isVisible) {
-          // Only start animation when section is at least 50% visible
-          if (entry.intersectionRatio >= 0.5) {
-            setIsVisible(true)
-            startCountingAnimation()
-          }
+          setIsVisible(true)
+          startCountingAnimation()
         }
       },
       { 
-        threshold: [0.3, 0.5, 0.7], // Multiple thresholds for better detection
-        rootMargin: '-50px 0px -50px 0px' // Ensure section is well within viewport
+        threshold: 0.1, // Trigger when just 10% of the section is visible
+        rootMargin: '100px 0px -100px 0px' // Start observing before the section enters viewport
       }
     )
 
