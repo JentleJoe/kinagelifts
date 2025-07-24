@@ -136,79 +136,13 @@ const Footer = () => {
                 href="https://peakbrand.agency" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="group relative float-animation cursor-pointer inline-block"
+                className="group relative cursor-pointer inline-block px-2 py-1"
+                style={{ transition: 'color 0.3s' }}
               >
-                {/* Animated background glow with rainbow effect - fixed z-index to stay behind text */}
-                <div className="absolute -inset-3 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-pink-600/20 rounded-xl blur-md opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-pulse rainbow-filter -z-10"></div>
-                
-                {/* Multiple floating sparkles with different animations */}
-                <div className="absolute -top-2 -left-2 w-2 h-2 bg-yellow-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100" style={{animation: 'sparkle-bounce 2s infinite 0.1s'}}></div>
-                <div className="absolute -top-3 right-3 w-1.5 h-1.5 bg-pink-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-300" style={{animation: 'sparkle-bounce 2s infinite 0.3s'}}></div>
-                <div className="absolute -bottom-2 left-5 w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-500" style={{animation: 'sparkle-bounce 2s infinite 0.5s'}}></div>
-                <div className="absolute -bottom-3 -right-2 w-2 h-2 bg-green-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-700" style={{animation: 'sparkle-bounce 2s infinite 0.7s'}}></div>
-                <div className="absolute top-1 right-8 w-1 h-1 bg-orange-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-200" style={{animation: 'sparkle-bounce 2s infinite 0.2s'}}></div>
-                <div className="absolute bottom-1 left-12 w-1.5 h-1.5 bg-indigo-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-600" style={{animation: 'sparkle-bounce 2s infinite 0.6s'}}></div>
-                
-                {/* Main content with enhanced styling */}
-                <div className="relative flex items-center space-x-2 px-4 py-3 rounded-xl border border-transparent group-hover:border-white/30 transition-all duration-500 group-hover:bg-white/5 heartbeat-animation">
-                  <div className="relative overflow-hidden text-white font-bold text-lg transition-all duration-500 flex items-center space-x-2 glow-text">
-                    {/* Multiple sliding underlines for depth */}
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-                    <span className="absolute bottom-0.5 left-0 w-full h-0.5 bg-gradient-to-r from-pink-400 via-yellow-400 to-cyan-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-right delay-200"></span>
-                    
-                    {/* Enhanced text with individual character animations */}
-                    <span className="relative shimmer-text">
-                      {"peakbrand.agency".split("").map((char, index) => (
-                        <span 
-                          key={index}
-                          className="inline-block group-hover:animate-bounce transition-all duration-300 wiggle"
-                          style={{ 
-                            animationDelay: `${index * 80}ms`,
-                            animationDuration: '0.8s',
-                            transformOrigin: 'center bottom'
-                          }}
-                        >
-                          {char}
-                        </span>
-                      ))}
-                    </span>
-                    
-                    {/* Enhanced arrow with multiple effects */}
-                    <svg 
-                      className="w-5 h-5 transform transition-all duration-700 group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:rotate-45 group-hover:scale-125 rainbow-filter" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth="2.5" 
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        className="group-hover:animate-pulse"
-                      />
-                    </svg>
-                    
-                    {/* Enhanced shooting star effect */}
-                    <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-                      <div className="absolute top-1/2 -left-full w-6 h-0.5 bg-gradient-to-r from-transparent via-white to-transparent transform -translate-y-1/2 rotate-45 group-hover:left-full transition-all duration-1200 ease-out"></div>
-                      <div className="absolute top-1/3 -left-full w-4 h-0.5 bg-gradient-to-r from-transparent via-blue-300 to-transparent transform -translate-y-1/2 rotate-45 group-hover:left-full transition-all duration-1400 ease-out delay-100"></div>
-                    </div>
-                  </div>
-                  
-                  {/* Enhanced magic elements */}
-                  <div className="opacity-0 group-hover:opacity-100 transition-all duration-500 ml-2 flex items-center space-x-1">
-                    <svg className="w-5 h-5 text-yellow-400 animate-spin" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M7.5 5.6L10 7L8.6 4.5L10 2L7.5 3.4L5 2L6.4 4.5L5 7L7.5 5.6ZM19.5 15.4L22 14L20.6 16.5L22 19L19.5 17.6L17 19L18.4 16.5L17 14L19.5 15.4ZM22 2L20.6 4.5L22 7L19.5 5.6L17 7L18.4 4.5L17 2L19.5 3.4L22 2ZM13.34 12.78L15.78 10.34L13.66 8.22L11.22 10.66L13.34 12.78ZM14.37 7.29L16.71 9.63C17.1 10.02 17.1 10.65 16.71 11.04L11.04 16.71C10.65 17.1 10.02 17.1 9.63 16.71L7.29 14.37C6.9 13.98 6.9 13.35 7.29 12.96L12.96 7.29C13.35 6.9 13.98 6.9 14.37 7.29Z"/>
-                    </svg>
-                    <span className="text-xs text-yellow-400 animate-pulse font-bold">✨</span>
-                  </div>
-                </div>
-                
-                {/* Multiple pulsing ring effects */}
-                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-40 group-hover:animate-ping border-2 border-white pointer-events-none"></div>
-                <div className="absolute inset-1 rounded-xl opacity-0 group-hover:opacity-30 group-hover:animate-ping border border-blue-400 delay-150 pointer-events-none"></div>
-                <div className="absolute inset-2 rounded-xl opacity-0 group-hover:opacity-20 group-hover:animate-ping border border-purple-400 delay-300 pointer-events-none"></div>
+                <span className="relative font-bold text-white text-lg group-hover:text-blue-400 transition-colors duration-300">
+                  peakbrand.agency
+                  <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </span>
               </a>
             </div>
             <p className="transition-all duration-300 hover:text-white">&copy; {currentYear} KinageLifts. All rights reserved.</p>
