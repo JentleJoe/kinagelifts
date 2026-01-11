@@ -139,7 +139,7 @@ const Footer = () => {
                 className="group relative cursor-pointer inline-block px-2 py-1"
                 style={{ transition: 'color 0.3s' }}
               >
-                <span className="relative font-bold text-white text-lg group-hover:text-blue-400 transition-colors duration-300">
+                <span className="relative font-bold text-white text-sm group-hover:text-blue-400 transition-colors duration-300">
                   Joshua Oseghale
                   <span className="absolute left-0 bottom-0 w-full h-0.5 bg-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
                 </span>
