@@ -10,7 +10,7 @@ const phrases = [
 ]
 
 const Hero = () => {
-  const [displayedText, setDisplayedText] = useState("")
+  const [displayedText, setDisplayedText] = useState("ELEVATOR SOLUTIONS")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const [showCursor, setShowCursor] = useState(true)
