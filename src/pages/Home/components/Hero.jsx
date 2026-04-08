@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import escalatorImg from '../../../assets/escalator.png';
-import heroVideo from '../../../assets/herovideo.mp4';
+import webmVideo from '../../../assets/herovideo.webm';
+import mp4Video from '../../../assets/herovideo.mp4';
 
 const phrases = [
   "ELEVATOR SOLUTIONS",
@@ -54,7 +55,7 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Video Background */}
-      <video
+      {/* <video
         className="absolute inset-0 w-full h-full object-cover z-0"
         src={heroVideo}
         autoPlay
@@ -63,7 +64,19 @@ const Hero = () => {
         playsInline
         poster={escalatorImg}
         aria-label="Elevator and escalator video background"
-      />
+      /> */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster={escalatorImg}
+        aria-label="Elevator and escalator video background"
+      >
+        <source src={webmVideo} type="video/webm" />
+        <source src={mp4Video} type="video/mp4" />
+      </video>
       {/* Fallback image for browsers that do not support video */}
       <img
         src={escalatorImg}
