@@ -101,7 +101,13 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={toggleMobileMenu} className="text-white">
+          <button
+            onClick={toggleMobileMenu}
+            className="text-white"
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-navigation-menu"
+          >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}></path>
             </svg>
@@ -110,7 +116,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden bg-black bg-opacity-20 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden ${
+      <div id="mobile-navigation-menu" className={`md:hidden bg-black bg-opacity-20 backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden ${
         isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
       }`}>
         <div className="px-4 pt-2 pb-6 space-y-1">

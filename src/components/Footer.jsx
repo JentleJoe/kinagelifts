@@ -67,7 +67,11 @@ const Footer = () => {
                 placeholder="Enter Your Email"
                 className="flex-grow bg-[#2A2A2A] text-white py-3 px-4 focus:outline-none border border-gray-700 focus:border-white transition-colors placeholder-gray-500"
               />
-              <button className="bg-white text-[#1B1B1B] w-12 h-auto flex items-center justify-center hover:bg-gray-200 transition-colors group">
+              <button
+                type="submit"
+                aria-label="Subscribe to newsletter"
+                className="bg-white text-[#1B1B1B] w-12 h-auto flex items-center justify-center hover:bg-gray-200 transition-colors group"
+              >
                 <svg
                   className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
                   fill="none"

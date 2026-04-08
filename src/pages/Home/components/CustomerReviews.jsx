@@ -56,6 +56,7 @@ const CustomerReviews = () => {
             onMouseEnter={() => setAutoPlay(false)}
             onMouseLeave={() => setAutoPlay(true)}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+            aria-label="Show previous customer review"
           >
             <ChevronLeft className="w-5 h-5 text-gray-600" />
           </button>
@@ -65,6 +66,7 @@ const CustomerReviews = () => {
             onMouseEnter={() => setAutoPlay(false)}
             onMouseLeave={() => setAutoPlay(true)}
             className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 hover:bg-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110"
+            aria-label="Show next customer review"
           >
             <ChevronRight className="w-5 h-5 text-gray-600" />
           </button>
@@ -126,6 +128,7 @@ const CustomerReviews = () => {
                   ? 'bg-[#1B1B1B] scale-125' 
                   : 'bg-gray-300 hover:bg-gray-400'
               }`}
+              aria-label={`Go to customer review ${index + 1}`}
             />
           ))}
         </div>

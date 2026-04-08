@@ -118,6 +118,7 @@ const Contact = () => {
                   <button
                     onClick={() => copyToClipboard('+2348103664912', 'phone1')}
                     className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-3 rounded-lg transition-colors font-medium"
+                    aria-label={copiedPhone1 ? 'Phone number +234 810 366 4912 copied to clipboard' : 'Copy phone number +234 810 366 4912'}
                   >
                     {copiedPhone1 ? (
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -143,6 +144,7 @@ const Contact = () => {
                   <button
                     onClick={() => copyToClipboard('+2347067285046', 'phone2')}
                     className="bg-gray-200 hover:bg-gray-300 text-gray-700 px-3 py-3 rounded-lg transition-colors font-medium"
+                    aria-label={copiedPhone2 ? 'Phone number +234 706 728 5046 copied to clipboard' : 'Copy phone number +234 706 728 5046'}
                   >
                     {copiedPhone2 ? (
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
