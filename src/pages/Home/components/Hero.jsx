@@ -55,16 +55,6 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Video Background */}
-      {/* <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        src={heroVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster={escalatorImg}
-        aria-label="Elevator and escalator video background"
-      /> */}
       <video
         className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
