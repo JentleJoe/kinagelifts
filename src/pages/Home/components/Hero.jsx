@@ -61,7 +61,7 @@ const Hero = () => {
         loop
         muted
         playsInline
-        poster={escalatorImg}
+        // poster={escalatorImg}
         aria-label="Elevator and escalator video background"
       >
         <source src={webmVideo} type="video/webm" />
