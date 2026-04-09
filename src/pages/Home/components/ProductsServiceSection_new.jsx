@@ -157,13 +157,21 @@ const ProductServiceSection = ({ title, items = [], showNavigation = false }) =>
                   <button
                     key={index}
                     onClick={() => setCurrentPage(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-11 h-11 flex items-center justify-center rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#1B1B1B] ${
                       currentPage === index 
-                        ? 'bg-[#1B1B1B] scale-110' 
-                        : 'bg-gray-300 hover:bg-gray-400'
+                        ? 'bg-gray-100' 
+                        : 'bg-transparent hover:bg-gray-100'
                     }`}
                     aria-label={`Go to page ${index + 1}`}
-                  />
+                  >
+                    <span
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        currentPage === index
+                          ? 'bg-[#1B1B1B] scale-110'
+                          : 'bg-gray-300 hover:bg-gray-400'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
             </div>
