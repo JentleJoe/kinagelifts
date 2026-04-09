@@ -91,7 +91,7 @@ const Hero = () => {
             </h1>
 
             {/* Decorative Line with Animation */}
-            {/* <div className="w-16 h-1 bg-white mb-8 animate-pulse"></div> */}
+            <div className="w-16 h-1 bg-white mb-8 animate-pulse"></div>
 
             {/* Subtext */}
             <p className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-12 max-w-2xl">
