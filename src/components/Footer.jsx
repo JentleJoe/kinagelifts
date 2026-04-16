@@ -137,7 +137,7 @@ const Footer = () => {
               
               {/* Make the entire animation container clickable */}
               <a 
-                href="https://joshuaoseghale.vercel.app" 
+                href="https://joshuaoseghale.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="group relative cursor-pointer inline-block px-2 py-1"
