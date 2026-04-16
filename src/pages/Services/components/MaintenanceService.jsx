@@ -1,6 +1,6 @@
 import ServiceDetailItem from "./ServiceDetailItem"
 import { maintenanceServicesData } from "../data/maintenanceServicesData"
-import maintenance from "../../../assets/maintenance.png"
+import maintenance from "../../../assets/maintenance.jpg"
 
 const MaintenanceService = () => {
   return (

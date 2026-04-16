@@ -9,17 +9,17 @@ import ContactFormSection from '../../components/ContactFormSection';
 import FloatingCTA from '../../components/FloatingCTA';
 
 // Import local assets
-import movingWalkway from '../../assets/movingWalkway.png';
-import stairlift from '../../assets/stairlift.png';
-import elevator from '../../assets/elevator.png';
-import freightElevator from '../../assets/freightElevator.png';
-import escalator from '../../assets/escalator.png';
-import dumbwaiters from '../../assets/dumbwaiters.png';
-import maintenance from '../../assets/maintenance.png';
-import maintenance2 from '../../assets/maintenance2.png';
-import installation from '../../assets/installation.png';
-import modernization from '../../assets/modernization.png';
-import installation2 from '../../assets/installation2.png';
+import movingWalkway from '../../assets/movingWalkway.jpg';
+import stairlift from '../../assets/stairlift.jpg';
+import elevator from '../../assets/elevator.jpg';
+import freightElevator from '../../assets/freightElevator.jpg';
+import escalator from '../../assets/escalator.jpg';
+import dumbwaiters from '../../assets/dumbwaiters.jpg';
+import maintenance from '../../assets/maintenance.jpg';
+import maintenance2 from '../../assets/maintenance2.jpg';
+import installation from '../../assets/installation.jpg';
+import modernization from '../../assets/modernization.jpg';
+import installation2 from '../../assets/installation2.jpg';
 
 const Home = () => {
   // Function to scroll to contact form

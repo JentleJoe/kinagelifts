@@ -1,14 +1,14 @@
 // Import local assets
-import movingWalkway from '../../../assets/movingWalkway.png';
-import homeElevator from '../../../assets/homeElevator.png';
-import elevator from '../../../assets/elevator.png';
-import freightElevator from '../../../assets/freightElevator.png';
-import stairlift from '../../../assets/stairlift.png';
-import wheelchairLift from '../../../assets/wheelchairLift.png';
-import dumbwaiters from '../../../assets/dumbwaiters.png';
-import maintenance from '../../../assets/maintenance.png';
-import maintenance2 from '../../../assets/maintenance2.png';
-import escalator from '../../../assets/escalator.png';
+import movingWalkway from '../../../assets/movingWalkway.jpg';
+import homeElevator from '../../../assets/homeElevator.jpg';
+import elevator from '../../../assets/elevator.jpg';
+import freightElevator from '../../../assets/freightElevator.jpg';
+import stairlift from '../../../assets/stairlift.jpg';
+import wheelchairLift from '../../../assets/wheelchairLift.jpg';
+import dumbwaiters from '../../../assets/dumbwaiters.jpg';
+import maintenance from '../../../assets/maintenance.jpg';
+import maintenance2 from '../../../assets/maintenance2.jpg';
+import escalator from '../../../assets/escalator.jpg';
 
 export const productsData = {
   elevators: {

@@ -1,5 +1,5 @@
 import FloatingCTA from "../../components/FloatingCTA";
-import installation2 from "../../assets/installation2.png";
+import installation2 from "../../assets/installation2.jpg";
 
 const About = () => {
   return (

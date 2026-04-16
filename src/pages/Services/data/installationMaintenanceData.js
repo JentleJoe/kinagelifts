@@ -1,14 +1,14 @@
 import { Grid } from "lucide-react" // Reusing Grid icon for consistency
 
 // Import local assets
-import installation2 from "../../../assets/installation2.png"
-import escalator from "../../../assets/escalator.png"
-import stairlift from "../../../assets/stairlift.png"
-import installation from "../../../assets/installation.png"
-import maintenance from "../../../assets/maintenance.png"
-import maintenance2 from "../../../assets/maintenance2.png"
-import modernization from "../../../assets/modernization.png"
-import elevator from "../../../assets/elevator.png"
+import installation2 from "../../../assets/installation2.jpg"
+import escalator from "../../../assets/escalator.jpg"
+import stairlift from "../../../assets/stairlift.jpg"
+import installation from "../../../assets/installation.jpg"
+import maintenance from "../../../assets/maintenance.jpg"
+import maintenance2 from "../../../assets/maintenance2.jpg"
+import modernization from "../../../assets/modernization.jpg"
+import elevator from "../../../assets/elevator.jpg"
 
 export const installationData = [
   {

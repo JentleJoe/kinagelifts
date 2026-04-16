@@ -1,6 +1,6 @@
 import ServiceDetailItem from "./ServiceDetailItem"
 import { installationServicesData } from "../data/installationServicesData"
-import installation2 from "../../../assets/installation2.png"
+import installation2 from "../../../assets/installation2.jpg"
 
 const InstallationService = () => {
   return (

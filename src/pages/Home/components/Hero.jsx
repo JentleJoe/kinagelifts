@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import escalatorImg from '../../../assets/escalator.png';
+import escalatorImg from '../../../assets/escalator.jpg';
 import webmVideo from '../../../assets/herovideo.webm';
 import mp4Video from '../../../assets/herovideo.mp4';
 
