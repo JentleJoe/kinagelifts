@@ -3,6 +3,8 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import ProductServiceCard from "../../../components/ProductServiceCard"
 
+const CarouselComponent = Carousel?.default ?? Carousel
+
 const ProductServiceSection = ({ title, items = [], showNavigation = false }) => {
   const carouselRef = useRef(null)
   const [currentPage, setCurrentPage] = useState(0)
@@ -132,7 +134,7 @@ const ProductServiceSection = ({ title, items = [], showNavigation = false }) =>
                 </div>
               )}
 
-              <Carousel
+              <CarouselComponent
                 ref={carouselRef}
                 responsive={responsive}
                 autoPlay={true}
@@ -171,7 +173,7 @@ const ProductServiceSection = ({ title, items = [], showNavigation = false }) =>
                     />
                   </div>
                 ))}
-              </Carousel>
+              </CarouselComponent>
 
               {/* Universal Progress Indicator - Shows when not all items are visible */}
               {showNavigation && shouldShowProgress() && (
@@ -210,7 +212,7 @@ const ProductServiceSection = ({ title, items = [], showNavigation = false }) =>
       </div>
 
       {/* Custom CSS for carousel styling */}
-      <style jsx>{`
+      <style>{`
         .carousel-container .react-multi-carousel-list {
           padding: 20px 0;
         }
