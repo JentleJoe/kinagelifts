@@ -8,6 +8,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import ContactFormSection from '../../components/ContactFormSection';
 import FloatingCTA from '../../components/FloatingCTA';
 import { optimizedImages } from '../../assets/imageCatalog';
+import { cardImages } from '../../assets/cardImageCatalog';
 
 const Home = () => {
   // Function to scroll to contact form
@@ -20,37 +21,37 @@ const Home = () => {
     {
       id: 1,
       title: "Passenger Elevators",
-      image: optimizedImages.elevator,
+      image: cardImages.elevator,
       link: "/products?category=elevators"
     },
     {
       id: 2,
       title: "Freight Elevators",
-      image: optimizedImages.freightElevator,
+      image: cardImages.freightElevator,
       link: "/products?category=elevators"
     },
     {
       id: 3,
       title: "Escalators",
-      image: optimizedImages.escalator,
+      image: cardImages.escalator,
       link: "/products?category=escalators"
     },
     {
       id: 4,
       title: "Dumbwaiters",
-      image: optimizedImages.dumbwaiters,
+      image: cardImages.dumbwaiters,
       link: "/products?category=specialized"
     },
     {
       id: 5,
       title: "Moving Walkways",
-      image: optimizedImages.movingWalkway,
+      image: cardImages.movingWalkway,
       link: "/products?category=escalators"
     },
     {
       id: 6,
       title: "Stairlifts",
-      image: optimizedImages.stairlift,
+      image: cardImages.stairlift,
       link: "/products?category=specialized"
     }
   ];
@@ -59,19 +60,19 @@ const Home = () => {
     {
       id: 1,
       title: "Installation Services",
-      image: optimizedImages.installation,
+      image: cardImages.installation,
       link: "/services"
     },
     {
       id: 2,
       title: "Maintenance & Repair",
-      image: optimizedImages.maintenance2,
+      image: cardImages.maintenance2,
       link: "/services"
     },
     {
       id: 3,
       title: "Modernization",
-      image: optimizedImages.modernization,
+      image: cardImages.modernization,
       link: "/services"
     }
   ];
