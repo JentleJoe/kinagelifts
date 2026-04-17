@@ -8,6 +8,7 @@ const ProductServiceCard = ({ image, title, link }) => {
         <ResponsiveImage
           image={image}
           alt={title}
+          pictureClassName="block w-full h-full"
           className="w-full h-full object-cover"
           sizes="(max-width: 639px) 280px, (max-width: 767px) 300px, 320px"
         />
