@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
+import ResponsiveImage from './ResponsiveImage';
 
 const ProductServiceCard = ({ image, title, link }) => {
   return (
     <div className="flex-none w-[280px] sm:w-[300px] md:w-[320px] bg-white shadow-sm overflow-hidden flex flex-col">
       <div className="w-full h-[200px] sm:h-[220px] md:h-[240px] overflow-hidden">
-        <img src={image || "/placeholder.svg"} alt={title} className="w-full h-full object-cover" />
+        <ResponsiveImage
+          image={image}
+          alt={title}
+          className="w-full h-full object-cover"
+          sizes="(max-width: 639px) 280px, (max-width: 767px) 300px, 320px"
+        />
       </div>
       <div className="flex">
         <div className="flex-1 p-3 sm:p-4 flex items-center">

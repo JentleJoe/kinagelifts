@@ -1,5 +1,6 @@
 import FloatingCTA from "../../components/FloatingCTA";
-import installation2 from "../../assets/installation2.jpg";
+import ResponsiveImage from "../../components/ResponsiveImage";
+import { optimizedImages } from "../../assets/imageCatalog";
 
 const About = () => {
   return (
@@ -46,10 +47,11 @@ const About = () => {
 
             {/* Image */}
             <div className="lg:order-first">
-              <img
-                src={installation2}
+              <ResponsiveImage
+                image={optimizedImages.installation2}
                 alt="Modern elevator installation"
                 className="w-full h-[500px] object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 1023px) 100vw, 50vw"
               />
             </div>
           </div>

@@ -1,3 +1,5 @@
+import ResponsiveImage from "../../../components/ResponsiveImage"
+
 const ServiceBlock = ({ title, description, image, icon: Icon, layout }) => {
   const isImageLeft = layout === "image-left"
 
@@ -14,7 +16,12 @@ const ServiceBlock = ({ title, description, image, icon: Icon, layout }) => {
       
       {/* Image - Always second on mobile */}
       <div className={`h-full ${isImageLeft ? "md:order-1" : "md:order-2"}`}>
-        <img src={image || "/placeholder.svg"} alt={title} className="w-full h-64 object-cover" />
+        <ResponsiveImage
+          image={image}
+          alt={title}
+          className="w-full h-64 object-cover"
+          sizes="(max-width: 767px) 100vw, 50vw"
+        />
       </div>
     </div>
   )

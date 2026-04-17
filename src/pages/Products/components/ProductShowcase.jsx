@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { productsData } from '../data/productsData';
+import ResponsiveImage from '../../../components/ResponsiveImage';
 
 const ProductShowcase = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -79,10 +80,11 @@ const ProductShowcase = () => {
               </button>
             </div>
             <div className="relative">
-              <img
-                src={currentCategory.image}
+              <ResponsiveImage
+                image={currentCategory.image}
                 alt={currentCategory.category}
                 className="w-full h-64 object-cover rounded-lg shadow-lg"
+                sizes="(max-width: 1023px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -102,10 +104,11 @@ const ProductShowcase = () => {
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-4">
-                    <img
-                      src={subcategory.image}
+                    <ResponsiveImage
+                      image={subcategory.image}
                       alt={subcategory.name}
                       className="w-16 h-16 object-cover rounded-lg"
+                      sizes="64px"
                     />
                     <div>
                       <h4 className="text-xl font-heading font-bold text-[#1B1B1B] uppercase">

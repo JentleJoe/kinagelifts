@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { achievementsData } from "./data/achievementsData"
+import ResponsiveImage from "../../../components/ResponsiveImage"
 
 const Achievements = ({ statsImage }) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -88,10 +89,11 @@ const Achievements = ({ statsImage }) => {
         {/* Right Column: Image */}
         <div className="flex justify-center lg:justify-end">
           <div className="bg-white shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
-            <img
-              src={statsImage}
+            <ResponsiveImage
+              image={statsImage}
               alt="Professional elevator technician working on modern lift system"
               className="w-full h-[400px] object-cover group-hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 1023px) 100vw, 50vw"
             />
           </div>
         </div>

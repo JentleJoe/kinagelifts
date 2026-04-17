@@ -2,6 +2,7 @@ import { useState } from "react"
 import FAQItem from "./FAQItem"
 import { faqData } from "../../../data/faqData"
 import { Grid3x3, LayoutGrid } from "lucide-react" // Reusing icons from achievements
+import ResponsiveImage from "../../../components/ResponsiveImage"
 
 const FAQSection = ({ faqImage }) => {
   const [openIndex, setOpenIndex] = useState(null)
@@ -35,10 +36,11 @@ const FAQSection = ({ faqImage }) => {
         {/* Right Column: Image and Stats */}
         <div className="relative flex justify-center lg:justify-end">
           <div className="bg-white shadow-sm">
-            <img
-              src={faqImage}
+            <ResponsiveImage
+              image={faqImage}
               alt="Modern Glass Elevator in Corporate Building"
               className="w-full h-[400px] lg:h-[550px] lg:w-[500px] object-cover"
+              sizes="(max-width: 1023px) 100vw, 500px"
             />
           </div>
           {/* Overlaid Stats */}

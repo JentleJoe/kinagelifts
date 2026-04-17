@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
-import escalatorImg from '../../../assets/escalator.jpg';
 import webmVideo from '../../../assets/herovideo.webm';
 import mp4Video from '../../../assets/herovideo.mp4';
+import { heroPoster, optimizedImages } from '../../../assets/imageCatalog';
 
 const phrases = [
   "ELEVATOR SOLUTIONS",
@@ -52,6 +52,8 @@ const Hero = () => {
     return () => clearInterval(cursorTimer)
   }, [])
 
+  const heroPosterSrc = heroPoster || optimizedImages.escalator?.img?.src
+
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Video Background */}
@@ -61,7 +63,7 @@ const Hero = () => {
         loop
         muted
         playsInline
-        poster={escalatorImg}
+        poster={heroPosterSrc}
         aria-label="Elevator and escalator video background"
       >
         <source src={webmVideo} type="video/webm" />
@@ -69,7 +71,7 @@ const Hero = () => {
       </video>
       {/* Fallback image for browsers that do not support video */}
       <img
-        src={escalatorImg}
+        src={heroPosterSrc}
         alt="Escalator placeholder"
         className="absolute inset-0 w-full h-full object-cover z-0"
         style={{ display: 'none' }}

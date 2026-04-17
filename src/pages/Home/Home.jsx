@@ -7,19 +7,7 @@ import FAQSection from './components/FAQSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import ContactFormSection from '../../components/ContactFormSection';
 import FloatingCTA from '../../components/FloatingCTA';
-
-// Import local assets
-import movingWalkway from '../../assets/movingWalkway.jpg';
-import stairlift from '../../assets/stairlift.jpg';
-import elevator from '../../assets/elevator.jpg';
-import freightElevator from '../../assets/freightElevator.jpg';
-import escalator from '../../assets/escalator.jpg';
-import dumbwaiters from '../../assets/dumbwaiters.jpg';
-import maintenance from '../../assets/maintenance.jpg';
-import maintenance2 from '../../assets/maintenance2.jpg';
-import installation from '../../assets/installation.jpg';
-import modernization from '../../assets/modernization.jpg';
-import installation2 from '../../assets/installation2.jpg';
+import { optimizedImages } from '../../assets/imageCatalog';
 
 const Home = () => {
   // Function to scroll to contact form
@@ -32,37 +20,37 @@ const Home = () => {
     {
       id: 1,
       title: "Passenger Elevators",
-      image: elevator,
+      image: optimizedImages.elevator,
       link: "/products?category=elevators"
     },
     {
       id: 2,
       title: "Freight Elevators",
-      image: freightElevator,
+      image: optimizedImages.freightElevator,
       link: "/products?category=elevators"
     },
     {
       id: 3,
       title: "Escalators",
-      image: escalator,
+      image: optimizedImages.escalator,
       link: "/products?category=escalators"
     },
     {
       id: 4,
       title: "Dumbwaiters",
-      image: dumbwaiters,
+      image: optimizedImages.dumbwaiters,
       link: "/products?category=specialized"
     },
     {
       id: 5,
       title: "Moving Walkways",
-      image: movingWalkway,
+      image: optimizedImages.movingWalkway,
       link: "/products?category=escalators"
     },
     {
       id: 6,
       title: "Stairlifts",
-      image: stairlift,
+      image: optimizedImages.stairlift,
       link: "/products?category=specialized"
     }
   ];
@@ -71,19 +59,19 @@ const Home = () => {
     {
       id: 1,
       title: "Installation Services",
-      image: installation,
+      image: optimizedImages.installation,
       link: "/services"
     },
     {
       id: 2,
       title: "Maintenance & Repair",
-      image: maintenance2,
+      image: optimizedImages.maintenance2,
       link: "/services"
     },
     {
       id: 3,
       title: "Modernization",
-      image: modernization,
+      image: optimizedImages.modernization,
       link: "/services"
     }
   ];
@@ -179,7 +167,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Achievements statsImage={maintenance} />
+      <Achievements statsImage={optimizedImages.maintenance} />
 
       {/* CTA Section after Achievements */}
       <section className="py-16 bg-gray-50">
@@ -210,7 +198,7 @@ const Home = () => {
       </section>
       
       <CustomerReviews />
-      <FAQSection faqImage={installation2} />
+      <FAQSection faqImage={optimizedImages.installation2} />
       <WhyChooseUs />
       
       {/* Final CTA Section before Contact */}
