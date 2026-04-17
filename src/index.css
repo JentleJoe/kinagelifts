@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Metric-tuned fallback aliases reduce layout shift while web fonts load. */
+@font-face {
+  font-family: 'Montserrat Fallback';
+  src: local('Arial');
+  size-adjust: 93%;
+  ascent-override: 95%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Fallback';
+  src: local('Arial Narrow');
+  size-adjust: 98%;
+  ascent-override: 92%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: 'Anton Fallback';
+  src: local('Arial Black');
+  size-adjust: 96%;
+  ascent-override: 93%;
+  descent-override: 23%;
+  line-gap-override: 0%;
+}
+
 /* Custom global styles */
 * {
   box-sizing: border-box;
@@ -9,7 +37,7 @@
 
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', 'Montserrat Fallback', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden; /* Prevent horizontal scrolling */

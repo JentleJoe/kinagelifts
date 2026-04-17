@@ -7,9 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
-        heading: ['Bebas Neue', 'sans-serif'],
-        anton: ['Anton', 'sans-serif'],
+        sans: ['Montserrat', 'Montserrat Fallback', 'sans-serif'],
+        heading: ['Bebas Neue', 'Bebas Neue Fallback', 'sans-serif'],
+        anton: ['Anton', 'Anton Fallback', 'sans-serif'],
       }
     },
   },

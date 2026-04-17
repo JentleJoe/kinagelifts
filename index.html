@@ -27,8 +27,26 @@
     <meta name="twitter:image" content="https://kinagelifts.com/meta-image.png" />
     <meta name="twitter:image:alt" content="KinageLifts Elevator Services" />
     
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Bebas+Neue&family=Anton&display=swap" rel="stylesheet">
+    <!-- Fonts: preconnect + non-blocking stylesheet load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Bebas+Neue&family=Anton&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Bebas+Neue&family=Anton&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Bebas+Neue&family=Anton&display=swap"
+      />
+    </noscript>
     
     <!-- Theme Color -->
     <meta name="theme-color" content="#000000" />
