@@ -1,7 +1,7 @@
 import ServiceDetailItem from "./ServiceDetailItem"
 import { installationServicesData } from "../data/installationServicesData"
 import ResponsiveImage from "../../../components/ResponsiveImage"
-import { optimizedImages } from "../../../assets/imageCatalog"
+import { sectionImages } from "../../../assets/sectionImageCatalog"
 
 const InstallationService = () => {
   return (
@@ -39,7 +39,7 @@ const InstallationService = () => {
           {/* Right Column: Image (No extra container, full height) - Always second on mobile */}
           <div className="flex justify-center lg:justify-end lg:order-2">
             <ResponsiveImage
-              image={optimizedImages.installation2}
+              image={sectionImages.installation2}
               alt="Modern Glass Elevator Installation"
               className="w-full object-cover lg:h-[872px]"
               sizes="(max-width: 1023px) 100vw, 40vw"

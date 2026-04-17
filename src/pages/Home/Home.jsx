@@ -9,6 +9,7 @@ import ContactFormSection from '../../components/ContactFormSection';
 import FloatingCTA from '../../components/FloatingCTA';
 import { optimizedImages } from '../../assets/imageCatalog';
 import { cardImages } from '../../assets/cardImageCatalog';
+import { sectionImages } from '../../assets/sectionImageCatalog';
 
 const Home = () => {
   // Function to scroll to contact form
@@ -199,7 +200,7 @@ const Home = () => {
       </section>
       
       <CustomerReviews />
-      <FAQSection faqImage={optimizedImages.installation2} />
+      <FAQSection faqImage={sectionImages.installation2} />
       <WhyChooseUs />
       
       {/* Final CTA Section before Contact */}

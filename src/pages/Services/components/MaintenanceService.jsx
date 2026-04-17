@@ -1,7 +1,7 @@
 import ServiceDetailItem from "./ServiceDetailItem"
 import { maintenanceServicesData } from "../data/maintenanceServicesData"
 import ResponsiveImage from "../../../components/ResponsiveImage"
-import { optimizedImages } from "../../../assets/imageCatalog"
+import { sectionImages } from "../../../assets/sectionImageCatalog"
 
 const MaintenanceService = () => {
   return (
@@ -37,7 +37,7 @@ const MaintenanceService = () => {
           {/* Image - Always second on mobile */}
           <div className="flex justify-center lg:justify-start lg:order-1">
             <ResponsiveImage
-              image={optimizedImages.maintenance}
+              image={sectionImages.maintenance}
               alt="Elevator Maintenance and Repair"
               className="w-full object-cover lg:h-[880px]"
               sizes="(max-width: 1023px) 100vw, 40vw"
