@@ -8,7 +8,8 @@
     "build": "npm run build:spa && npm run prerender",
     "build:prerender": "npm run build",
     "build:spa": "vite build",
-    "prerender": "node scripts/prerender.mjs && node scripts/verify-prerender.mjs",
+    "build:ssr": "vite build --ssr src/entry-server.jsx --outDir dist-ssr",
+    "prerender": "npm run build:ssr && node scripts/prerender.mjs && node scripts/verify-prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
