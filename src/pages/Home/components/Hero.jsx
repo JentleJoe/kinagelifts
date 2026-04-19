@@ -15,7 +15,6 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const [showCursor, setShowCursor] = useState(true)
-  const [isVideoReady, setIsVideoReady] = useState(false)
 
   useEffect(() => {
     const currentPhrase = phrases[currentIndex]
@@ -73,9 +72,7 @@ const Hero = () => {
 
       {/* Video Background */}
       <video
-        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${
-          isVideoReady ? 'opacity-100' : 'opacity-0'
-        }`}
+        className="absolute inset-0 w-full h-full object-cover z-0"
         autoPlay
         loop
         muted
@@ -83,7 +80,6 @@ const Hero = () => {
         preload="metadata"
         poster={heroPosterSrc}
         aria-label="Elevator and escalator video background"
-        onLoadedData={() => setIsVideoReady(true)}
       >
         <source src={webmVideo} type="video/webm" />
         <source src={mp4Video} type="video/mp4" />
