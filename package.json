@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run build:spa && npm run prerender",
+    "build:prerender": "npm run build",
+    "build:spa": "vite build",
+    "prerender": "node scripts/prerender.mjs && node scripts/verify-prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -27,6 +30,7 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "postcss": "^8.5.6",
+    "puppeteer-core": "^24.7.1",
     "tailwindcss": "^3.4.17",
     "vite": "^8.0.8",
     "vite-imagetools": "^10.0.0"

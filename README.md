@@ -54,6 +54,30 @@ npm run dev
 npm run build
 ```
 
+This project now uses static prerendering for key routes during production builds.
+
+- `npm run build` / `npm run build:prerender`: build + prerender + verification
+- `npm run prerender`: rerun prerender + verification on an existing `dist` build
+- `npm run build:spa`: plain Vite SPA build (no prerender)
+
+Prerendered routes are configured in `prerender.routes.mjs`.
+
+### Prerender Hardening
+
+Prerender execution supports environment-aware modes via `PRERENDER_MODE`:
+
+- `strict`: fail the build if prerender cannot run (default)
+- `auto`: skip prerender safely when browser runtime/dependencies are unavailable (explicit fallback mode)
+- `off`: disable prerender intentionally
+
+Useful environment variables:
+
+- `PRERENDER_MODE`: `strict`, `auto`, or `off`
+- `PRERENDER_BROWSER_PATH`: absolute path to a Chrome/Edge executable
+- `PUPPETEER_EXECUTABLE_PATH`: fallback executable path used by Puppeteer
+
+When prerender is skipped intentionally in `auto`/`off` mode (for example, missing Linux browser libraries in CI), the build writes `dist/.prerender-skip.json` and verification is skipped with a warning.
+
 ## 📁 Project Structure
 
 ```
