@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import webmVideo from '../../../assets/herovideo.webm';
 import mp4Video from '../../../assets/herovideo.mp4';
 import { heroPoster, optimizedImages } from '../../../assets/imageCatalog';
+import ResponsiveImage from '../../../components/ResponsiveImage';
 
 const phrases = [
   "ELEVATOR SOLUTIONS",
@@ -14,6 +15,7 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const [showCursor, setShowCursor] = useState(true)
+  const [isVideoReady, setIsVideoReady] = useState(false)
 
   useEffect(() => {
     const currentPhrase = phrases[currentIndex]
@@ -53,29 +55,40 @@ const Hero = () => {
   }, [])
 
   const heroPosterSrc = heroPoster || optimizedImages.escalator?.img?.src
+  const heroPosterImage = optimizedImages.escalator || heroPosterSrc
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
+      {/* LCP-first image background */}
+      <ResponsiveImage
+        image={heroPosterImage}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        pictureClassName="absolute inset-0 block z-0"
+        sizes="100vw"
+        loading="eager"
+        fetchPriority="high"
+      />
+
       {/* Video Background */}
       <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className={`absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-700 ${
+          isVideoReady ? 'opacity-100' : 'opacity-0'
+        }`}
         autoPlay
         loop
         muted
         playsInline
+        preload="metadata"
         poster={heroPosterSrc}
         aria-label="Elevator and escalator video background"
+        onLoadedData={() => setIsVideoReady(true)}
       >
         <source src={webmVideo} type="video/webm" />
         <source src={mp4Video} type="video/mp4" />
       </video>
-      {/* Fallback image for browsers that do not support video */}
-      <img
-        src={heroPosterSrc}
-        alt="Escalator placeholder"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        style={{ display: 'none' }}
-      />
+
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
