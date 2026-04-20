@@ -16,21 +16,8 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false)
   const [showCursor, setShowCursor] = useState(true)
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
-  const [enableTypewriter, setEnableTypewriter] = useState(false)
 
   useEffect(() => {
-    const typewriterTimer = setTimeout(() => {
-      setEnableTypewriter(true)
-    }, 3500)
-
-    return () => clearTimeout(typewriterTimer)
-  }, [])
-
-  useEffect(() => {
-    if (!enableTypewriter) {
-      return
-    }
-
     const currentPhrase = phrases[currentIndex]
     const typingSpeed = isDeleting ? 50 : 100
     const pauseTime = isDeleting ? 500 : 2000
@@ -56,21 +43,16 @@ const Hero = () => {
     }, typingSpeed)
 
     return () => clearTimeout(timer)
-  }, [displayedText, currentIndex, isDeleting, enableTypewriter])
+  }, [displayedText, currentIndex, isDeleting])
 
   // Cursor blinking effect
   useEffect(() => {
-    if (!enableTypewriter) {
-      setShowCursor(true)
-      return
-    }
-
     const cursorTimer = setInterval(() => {
       setShowCursor(prev => !prev)
     }, 500)
 
     return () => clearInterval(cursorTimer)
-  }, [enableTypewriter])
+  }, [])
 
   useEffect(() => {
     let timeoutId
