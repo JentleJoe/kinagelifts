@@ -79,7 +79,7 @@ const CustomerReviews = () => {
               <Quote className="w-12 h-12 text-gray-800 mx-auto animate-pulse" />
             </div>
             
-            <p className="text-lg text-gray-700 leading-relaxed mb-6 min-h-[80px] flex items-center justify-center">
+            <p className="text-lg text-gray-800 leading-relaxed mb-6 min-h-[80px] flex items-center justify-center">
               {currentTestimonial.quote}
             </p>
             
@@ -87,7 +87,7 @@ const CustomerReviews = () => {
               <StarRating rating={currentTestimonial.rating} />
             </div>
             
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-600 text-sm">
               Review {activeIndex + 1} of {testimonialsData.length}
             </p>
           </div>

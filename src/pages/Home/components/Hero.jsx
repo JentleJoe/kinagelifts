@@ -14,13 +14,12 @@ const Hero = () => {
   const [displayedText, setDisplayedText] = useState("ELEVATOR SOLUTIONS")
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-  const [showCursor, setShowCursor] = useState(true)
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
 
   useEffect(() => {
     const currentPhrase = phrases[currentIndex]
     const typingSpeed = isDeleting ? 50 : 100
-    const pauseTime = isDeleting ? 500 : 2000
+    const pauseTime = isDeleting ? 500 : 3000
 
     const timer = setTimeout(() => {
       if (!isDeleting && displayedText === currentPhrase) {
@@ -45,32 +44,51 @@ const Hero = () => {
     return () => clearTimeout(timer)
   }, [displayedText, currentIndex, isDeleting])
 
-  // Cursor blinking effect
-  useEffect(() => {
-    const cursorTimer = setInterval(() => {
-      setShowCursor(prev => !prev)
-    }, 500)
-
-    return () => clearInterval(cursorTimer)
-  }, [])
-
   useEffect(() => {
     let timeoutId
     let idleId
 
-    const enableVideo = () => {
-      timeoutId = window.setTimeout(() => {
-        setShouldLoadVideo(true)
-      }, 600)
+    let hasStartedVideo = false
+
+    const removeIntentListeners = () => {
+      window.removeEventListener("pointerdown", handleUserIntent)
+      window.removeEventListener("keydown", handleUserIntent)
+      window.removeEventListener("scroll", handleUserIntent)
     }
 
+    const loadVideo = () => {
+      if (hasStartedVideo) {
+        return
+      }
+
+      hasStartedVideo = true
+      removeIntentListeners()
+      setShouldLoadVideo(true)
+    }
+
+    const handleUserIntent = () => {
+      loadVideo()
+    }
+
+    const scheduleFallbackLoad = () => {
+      timeoutId = window.setTimeout(() => {
+        loadVideo()
+      }, 4500)
+    }
+
+    window.addEventListener("pointerdown", handleUserIntent, { passive: true })
+    window.addEventListener("keydown", handleUserIntent)
+    window.addEventListener("scroll", handleUserIntent, { passive: true })
+
     if ("requestIdleCallback" in window) {
-      idleId = window.requestIdleCallback(enableVideo, { timeout: 2500 })
+      idleId = window.requestIdleCallback(scheduleFallbackLoad, { timeout: 3000 })
     } else {
-      enableVideo()
+      scheduleFallbackLoad()
     }
 
     return () => {
+      removeIntentListeners()
+
       if (idleId && "cancelIdleCallback" in window) {
         window.cancelIdleCallback(idleId)
       }
@@ -102,6 +120,7 @@ const Hero = () => {
       {shouldLoadVideo && (
         <video
           className="absolute inset-0 w-full h-full object-cover z-0"
+          id="hero-background-video"
           autoPlay
           loop
           muted
@@ -126,7 +145,7 @@ const Hero = () => {
               YOUR TRUSTED PARTNER IN{" "}
               <span className="block">
                 {displayedText}
-                <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity duration-100`}>|</span>
+                <span aria-hidden="true">|</span>
               </span>
             </h1>
 
