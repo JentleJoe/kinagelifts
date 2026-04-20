@@ -15,8 +15,22 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
   const [showCursor, setShowCursor] = useState(true)
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false)
+  const [enableTypewriter, setEnableTypewriter] = useState(false)
 
   useEffect(() => {
+    const typewriterTimer = setTimeout(() => {
+      setEnableTypewriter(true)
+    }, 3500)
+
+    return () => clearTimeout(typewriterTimer)
+  }, [])
+
+  useEffect(() => {
+    if (!enableTypewriter) {
+      return
+    }
+
     const currentPhrase = phrases[currentIndex]
     const typingSpeed = isDeleting ? 50 : 100
     const pauseTime = isDeleting ? 500 : 2000
@@ -42,15 +56,47 @@ const Hero = () => {
     }, typingSpeed)
 
     return () => clearTimeout(timer)
-  }, [displayedText, currentIndex, isDeleting])
+  }, [displayedText, currentIndex, isDeleting, enableTypewriter])
 
   // Cursor blinking effect
   useEffect(() => {
+    if (!enableTypewriter) {
+      setShowCursor(true)
+      return
+    }
+
     const cursorTimer = setInterval(() => {
       setShowCursor(prev => !prev)
     }, 500)
 
     return () => clearInterval(cursorTimer)
+  }, [enableTypewriter])
+
+  useEffect(() => {
+    let timeoutId
+    let idleId
+
+    const enableVideo = () => {
+      timeoutId = window.setTimeout(() => {
+        setShouldLoadVideo(true)
+      }, 600)
+    }
+
+    if ("requestIdleCallback" in window) {
+      idleId = window.requestIdleCallback(enableVideo, { timeout: 2500 })
+    } else {
+      enableVideo()
+    }
+
+    return () => {
+      if (idleId && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleId)
+      }
+
+      if (timeoutId) {
+        window.clearTimeout(timeoutId)
+      }
+    }
   }, [])
 
   const heroPosterSrc = heroPoster || optimizedImages.escalator?.img?.src
@@ -70,20 +116,21 @@ const Hero = () => {
         fetchPriority="high"
       />
 
-      {/* Video Background */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="metadata"
-        poster={heroPosterSrc}
-        aria-label="Elevator and escalator video background"
-      >
-        <source src={webmVideo} type="video/webm" />
-        <source src={mp4Video} type="video/mp4" />
-      </video>
+      {/* Load video after first paint so the poster image can win LCP quickly. */}
+      {shouldLoadVideo && (
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="none"
+          aria-hidden="true"
+        >
+          <source src={webmVideo} type="video/webm" />
+          <source src={mp4Video} type="video/mp4" />
+        </video>
+      )}
 
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
