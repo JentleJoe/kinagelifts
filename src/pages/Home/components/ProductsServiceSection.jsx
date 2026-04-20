@@ -9,6 +9,7 @@ const ProductServiceSection = ({ title, items = [], showNavigation = false }) =>
   const carouselRef = useRef(null)
   const [currentPage, setCurrentPage] = useState(0)
   const [itemsPerView, setItemsPerView] = useState(3)
+  const [isClient, setIsClient] = useState(false)
 
   // Update items per view based on window size
   useEffect(() => {
@@ -27,6 +28,10 @@ const ProductServiceSection = ({ title, items = [], showNavigation = false }) =>
     window.addEventListener('resize', updateItemsPerView)
     return () => window.removeEventListener('resize', updateItemsPerView)
   }, [itemsPerView])
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   // Responsive breakpoints for react-multi-carousel
   const responsive = {
@@ -134,49 +139,69 @@ const ProductServiceSection = ({ title, items = [], showNavigation = false }) =>
                 </div>
               )}
 
-              <CarouselComponent
-                ref={carouselRef}
-                responsive={responsive}
-                autoPlay={true}
-                autoPlaySpeed={4000}
-                infinite={true}
-                pauseOnHover={true}
-                swipeable={true}
-                draggable={true}
-                showDots={false}
-                customLeftArrow={null}
-                customRightArrow={null}
-                dotListClass="hidden"
-                arrows={false}
-                containerClass="carousel-container"
-                itemClass="px-3"
-                customTransition="transform 500ms ease-in-out"
-                beforeChange={(nextSlide) => {
-                  updateCurrentPage(nextSlide);
-                }}
-                afterChange={(slideIndex) => {
-                  updateCurrentPage(slideIndex);
-                }}
-              >
-                {items.map((item, index) => (
-                  <div
-                    key={item.id}
-                    className="transform transition-all duration-300 hover:scale-105"
-                    style={{
-                      animationDelay: `${index * 100}ms`
-                    }}
-                  >
-                    <ProductServiceCard 
-                      image={item.image} 
-                      title={item.title} 
-                      link={item.link} 
-                    />
-                  </div>
-                ))}
-              </CarouselComponent>
+              {isClient ? (
+                <CarouselComponent
+                  ref={carouselRef}
+                  responsive={responsive}
+                  autoPlay={true}
+                  autoPlaySpeed={4000}
+                  infinite={true}
+                  pauseOnHover={true}
+                  swipeable={true}
+                  draggable={true}
+                  showDots={false}
+                  customLeftArrow={null}
+                  customRightArrow={null}
+                  dotListClass="hidden"
+                  arrows={false}
+                  containerClass="carousel-container"
+                  itemClass="px-3"
+                  customTransition="transform 500ms ease-in-out"
+                  beforeChange={(nextSlide) => {
+                    updateCurrentPage(nextSlide);
+                  }}
+                  afterChange={(slideIndex) => {
+                    updateCurrentPage(slideIndex);
+                  }}
+                >
+                  {items.map((item, index) => (
+                    <div
+                      key={item.id}
+                      className="transform transition-all duration-300 hover:scale-105"
+                      style={{
+                        animationDelay: `${index * 100}ms`
+                      }}
+                    >
+                      <ProductServiceCard 
+                        image={item.image} 
+                        title={item.title} 
+                        link={item.link} 
+                      />
+                    </div>
+                  ))}
+                </CarouselComponent>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {items.slice(0, 3).map((item, index) => (
+                    <div
+                      key={item.id}
+                      className="transform transition-all duration-300 hover:scale-105"
+                      style={{
+                        animationDelay: `${index * 100}ms`
+                      }}
+                    >
+                      <ProductServiceCard
+                        image={item.image}
+                        title={item.title}
+                        link={item.link}
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {/* Universal Progress Indicator - Shows when not all items are visible */}
-              {showNavigation && shouldShowProgress() && (
+              {showNavigation && isClient && shouldShowProgress() && (
                 <div className="block">
                   <div className="flex justify-center mt-6 space-x-2">
                     {Array.from({ length: getTotalPages() }).map((_, index) => {
