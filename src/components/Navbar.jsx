@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import NavTooltip from "./NavTooltip"
 import { navigationData } from "../data/navigationData"
+import { prefetchServicesRouteAssets } from "../utils/prefetchServicesRoute"
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState(null)
@@ -49,6 +50,12 @@ const Navbar = () => {
     setIsMobileMenuOpen(false)
   }
 
+  const prefetchOnServicesIntent = (href) => {
+    if (href === "/services") {
+      void prefetchServicesRouteAssets()
+    }
+  }
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-20 backdrop-blur-sm transition-transform duration-300 ease-in-out ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
@@ -80,8 +87,12 @@ const Navbar = () => {
               <Link
                 to={item.href}
                 className="text-white hover:text-gray-300 transition-colors font-medium relative py-2"
-                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseEnter={() => {
+                  handleMouseEnter(index)
+                  prefetchOnServicesIntent(item.href)
+                }}
                 onMouseLeave={handleMouseLeave}
+                onFocus={() => prefetchOnServicesIntent(item.href)}
               >
                 {item.label}
               </Link>
@@ -125,6 +136,8 @@ const Navbar = () => {
               key={item.label}
               to={item.href}
               className="block px-3 py-2 text-white hover:text-gray-300 transition-colors font-medium"
+              onTouchStart={() => prefetchOnServicesIntent(item.href)}
+              onFocus={() => prefetchOnServicesIntent(item.href)}
               onClick={closeMobileMenu}
             >
               {item.label}
