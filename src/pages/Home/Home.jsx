@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import Hero from './components/Hero';
-import ProductServiceSection from './components/ProductsServiceSection';
+// import ProductServiceSection from './components/ProductsServiceSection';
 import Achievements from './components/Achievements';
 import CustomerReviews from './components/CustomerReviews';
 import FAQSection from './components/FAQSection';
@@ -132,11 +132,11 @@ const Home = () => {
         </div>
       </section>
       
-      <ProductServiceSection 
+      {/* <ProductServiceSection 
         title="Our Services" 
         items={servicesData} 
         showNavigation={true} 
-      />
+      /> */}
       
       {/* Subtle CTA Section after Services */}
       <section className="py-12 bg-gray-50">
