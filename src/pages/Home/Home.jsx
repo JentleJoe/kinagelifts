@@ -82,11 +82,11 @@ const Home = () => {
     <>
       <Hero />
       
-      <ProductServiceSection 
+      {/* <ProductServiceSection 
         title="Our Products" 
         items={productsData} 
         showNavigation={true} 
-      />
+      /> */}
       
       {/* View All Products CTA */}
       <section className="py-8 bg-gray-50">
